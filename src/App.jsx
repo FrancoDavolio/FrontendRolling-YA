@@ -35,7 +35,7 @@ function App() {
         <Route exact path="/cardproducto" element={<CardProducto></CardProducto>}></Route>
         <Route exact path="/crearproducto" element={<CrearProducto></CrearProducto>}></Route>
         <Route exact path="/editar/:id" element={<EditarProducto></EditarProducto>}></Route>
-        <Route exact path="/itemproducto" element={<Error404></Error404>}></Route>
+        <Route exact path="/itemproducto" element={<ItemProducto></ItemProducto>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
