@@ -34,7 +34,7 @@ const Login = () => {
               },
             })}
           ></Form.Control>
-          <Form className="text-danger">{errors.usuario?.menssage}</Form>
+          <Form className="text-danger">{errors.usuario?.message}</Form>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Contraseña*</Form.Label>
