@@ -16,7 +16,7 @@ const Login = () => {
   return (
     <Container className="mainSection">
       <h1 className="text-center my-3">Login</h1>
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3">
           <Form.Label>Email*</Form.Label>
           <Form.Control
