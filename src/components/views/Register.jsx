@@ -1,38 +1,43 @@
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 const Register = () => {
   const {
     register,
     handleSubmit,
-    formState: { errosr },
-    reset,
+    formState: { errors },
+    // reset,
   } = useForm();
 
-  const onSubmit = (datos) => {
-    console.log(datos);
-    crearUsuarioAPI(datos).then((entrega) => {
-      console.log(entrega);
-      if (entrega.status === 201) {
-        Swal.fire(
-          "Usuario creado",
-          "El usuario fue creado exitosamente",
-          "success"
-        );
-        reset();
-      } else {
-        Swal.fire("Ocurrio un error");
-      }
-    });
-  };
+  //   const onSubmit = (datos) => {
+  //     console.log(datos);
+  //     crearUsuario(datos).then((entrega) => {
+  //       console.log(entrega);
+  //       if (entrega.status === 201) {
+  //         Swal.fire(
+  //           "Usuario creado",
+  //           "El usuario fue creado exitosamente",
+  //           "success"
+  //         );
+  //         reset();
+  //       } else {
+  //         Swal.fire("Ocurrio un error");
+  //       }
+  //     });
+  //   };
 
   return (
     <Container className="mainSection">
+
       <h1 className="text-center">Register</h1>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+
+      <Form onSubmit={handleSubmit()}>
+
         <Form.Group className="mb-3">
+
           <Form.Label>Nombre*</Form.Label>
+
           <Form.Control
             type="text"
             placeholder="Ej: Franco"
@@ -48,10 +53,15 @@ const Register = () => {
               },
             })}
           ></Form.Control>
-          <Form className="text-danger">{errosr.nombre?.message}</Form>
+
+          <Form className="text-danger">{errors.nombre?.message}</Form>
+
         </Form.Group>
+
         <Form.Group className="mb-3">
+
           <Form.Label>Email*</Form.Label>
+
           <Form.Control
             type="email"
             placeholder="Ej: Franco@gmail.com"
@@ -59,15 +69,20 @@ const Register = () => {
               required: "El email es obligatorio",
               pattern: {
                 value:
-                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ,
                 message: "Por favor ponga un email valido",
               },
             })}
           ></Form.Control>
-          <Form className="text-danger">{errosr.email?.message}</Form>
+
+          <Form className="text-danger">{errors.email?.message}</Form>
+
         </Form.Group>
+
         <Form.Group className="mb-3">
+
           <Form.Label>Contraseña*</Form.Label>
+
           <Form.Control
             type="password"
             placeholder="Ej: holamundo123"
@@ -81,11 +96,15 @@ const Register = () => {
               },
             })}
           ></Form.Control>
-          <Form className="text-danger">{errosr.contrasena?.message}</Form>
+
+          <Form className="text-danger">{errors.contrasena?.message}</Form>
+
         </Form.Group>
+
         <Button variant="primary" type="submit">
           Crear Cuenta
         </Button>
+
       </Form>
     </Container>
   );
