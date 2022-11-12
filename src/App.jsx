@@ -20,7 +20,7 @@ function App() {
   return (
     
     <BrowserRouter>
-      
+      <Menu></Menu>
       <Routes>
         <Route exact path="/menu" element={<Menu></Menu>}></Route>
         <Route exact path="/footer" element={<Footer></Footer>}></Route>
