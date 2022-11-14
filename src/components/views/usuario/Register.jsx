@@ -23,7 +23,7 @@ const Register = ({ setUsuarioLogueado }) => {
         );
         localStorage.setItem("tokenRollingYa", JSON.stringify(datos));
         setUsuarioLogueado(datos);
-        navigate("/administrador");
+        navigate("/");
       } else {
         Swal.fire("Ocurrio un error", "Intentelo mas tarde", "error");
       }

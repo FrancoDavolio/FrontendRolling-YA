@@ -28,7 +28,7 @@ const Login = ({ setUsuarioLogueado }) => {
             "tokenRollingYa",
             JSON.stringify(encontrarEmail.nombre)
           );
-          navigate = "/administrador";
+          navigate("/");
         } else {
           Swal.fire(
             "Error",
@@ -73,7 +73,7 @@ const Login = ({ setUsuarioLogueado }) => {
           <Form className="text-danger">{errors.contrasena?.message}</Form>
         </Form.Group>
         <Button variant="primary" type="submit">
-          Guardar
+          Iniciar Seccion
         </Button>
         <Button className="ms-3" onClick={() => navigate("/register")}>
           ¿No estas registrado?
