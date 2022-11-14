@@ -24,5 +24,11 @@
 }
 
 .imgRestaurant{
-    border-radius: 50%;
+   border-radius: 50%;
+}
+.colorTitulosCard{
+    color: black;
+    box-shadow: 0px 0px 0px 0px;
+    font: initial;
+    font-size: 200%;
 }

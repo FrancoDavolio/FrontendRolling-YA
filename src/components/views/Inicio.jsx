@@ -1,12 +1,15 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
+
 import Carousel from "react-bootstrap/Carousel";
-import Figure from "react-bootstrap/Figure";
+import { Container, Row,  } from "react-bootstrap";
+import Figure from 'react-bootstrap/Figure';
 import { Link } from "react-router-dom";
+import {CardImg, Card, Button} from "react-bootstrap";
+
 
 const Inicio = () => {
   return (
+    <>
     <Carousel fade>
       <Carousel.Item>
         <img
@@ -44,7 +47,98 @@ const Inicio = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+   <br />
+    <Container>
+      <Row xs={1} md={4} lg={4} >
+   
+
+<div >
+  
+    <Figure>
+      <Figure.Image  className="imgRestaurant"
+        width={171}
+        height={180}
+        alt="171x180"
+        src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+    </Figure>
+    <div className="ms-3"> <Link className="btn btn-danger" >RESTAURANT</Link></div>
+        
+    
+    </div>
+    <div>
+
+    <Figure>
+      <Figure.Image  className="imgRestaurant"
+        width={171}
+        height={180}
+        alt="171x180"
+        src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+    </Figure>
+    <div className="ms-3"> <Link className="btn btn-danger" >RESTAURANT</Link></div>
+        
+    </div>
+    <div>
+    <Figure>
+      <Figure.Image  className="imgRestaurant"
+        width={171}
+        height={180}
+        alt="171x180"
+        src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+         
+    </Figure>
+    <div className="ms-3"> <Link className="btn btn-danger" >RESTAURANT</Link></div>
+    
+    </div>
+  
+
+
+
+
+    </Row>
+
+    <hr />
+
+    <h2 className="colorTitulosCard">BEBIDAS</h2>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+      
+        <Button variant="primary">Ver más</Button>
+      </Card.Body>
+    </Card>
+    <h2 className="colorTitulosCard">Cafeteria</h2>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://images.pexels.com/photos/10342005/pexels-photo-10342005.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+      
+        <Button variant="primary">Ver más</Button>
+      </Card.Body>
+    </Card>
+    <h2 className="colorTitulosCard">Restaurant</h2>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+      
+        <Button variant="primary">Ver más</Button>
+      </Card.Body>
+    </Card>
+    </Container>
+    </>
+    
+   
+
+
+
+    
+
   );
+  
 };
 
 export default Inicio;
