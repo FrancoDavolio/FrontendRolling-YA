@@ -6,7 +6,7 @@ const Menu = () => {
     <header>
       <Nav className="bg-danger py-3">
         <Nav.Item as={Link} to="/" className="ms-3 nav-link text-light">
-          <h2>Cafeteria</h2>
+          <h2>Rolling-Ya</h2>
         </Nav.Item>
         <Nav.Item className="ms-2">
           <NavLink to="/" className="nav-item nav-link ms-2 text-light">

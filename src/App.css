@@ -8,3 +8,21 @@
     flex-grow: 1;
 }
 
+.caruselInicio{
+    object-fit: cover;
+    height: 30rem;
+}
+.tituloCarusel{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 10rem;
+}
+.parrafoCarusel{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+.imgRestaurant{
+    border-radius: 50%;
+}
