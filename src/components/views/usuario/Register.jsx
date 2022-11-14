@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { crearUsuarioAPI } from "../../helpers/queriesLogin";
 
-const Register = () => {
+const Register = ({setUsuarioLogueado}) => {
   const navigate = useNavigate();
   const {
     register,
@@ -22,11 +21,8 @@ const Register = () => {
           "El usuario fue creado exitosamente",
           "success"
         );
-        // //guardar la sesion del usuario en localstorage
-          //   localStorage.setItem('tokenCafeBenito', JSON.stringify(datos));
-          //   //actualizar el state usuarioLogueado
-          //   setUsuarioLogueado(datos)
-          //   // redireccionamos
+        localStorage.setItem('tokenRollingYa', JSON.stringify(datos));
+        setUsuarioLogueado(datos)
         navigate("/administrador")
       } else {
         Swal.fire("Ocurrio un error", "Intentelo mas tarde", "error");
