@@ -4,13 +4,33 @@
       "nombre": "Blacky",
       "email": "blacky12@gmail.com",
       "contrasena": "@Holamundo123",
+      "perfil": "cliente",
+      "estado": "confirmado",
       "id": 2
     },
     {
       "nombre": "Franco",
       "email": "francodavolio12@gmail.com",
       "contrasena": "@Holamundo123",
+      "perfil": "admin",
+      "estado": "confirmado",
       "id": 3
+    },
+    {
+      "nombre": "Juan",
+      "email": "juan@gmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 4
+    },
+    {
+      "nombre": "Matias",
+      "email": "afghaipfh@asdas.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "cliente",
+      "estado": "pendiente",
+      "id": 5
     }
   ]
 }

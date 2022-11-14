@@ -108,6 +108,20 @@ const Register = ({ setUsuarioLogueado }) => {
 
           <Form className="text-danger">{errors.contrasena?.message}</Form>
         </Form.Group>
+        <Form.Group>
+          <Form.Control
+            type="hidden"
+            value={"cliente"}
+            {...register("perfil")}
+          ></Form.Control>
+        </Form.Group>
+        <Form.Group>
+          <Form.Control
+            type="hidden"
+            value={"confirmado"}
+            {...register("estado")}
+          ></Form.Control>
+        </Form.Group>
 
         <Button variant="primary" type="submit">
           Crear Cuenta
