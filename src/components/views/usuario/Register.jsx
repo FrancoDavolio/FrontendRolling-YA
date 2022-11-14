@@ -3,7 +3,7 @@ import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { crearUsuarioAPI } from "../helpers/queriesLogin";
+import { crearUsuarioAPI } from "../../helpers/queriesLogin";
 
 const Register = () => {
   const navigate = useNavigate();

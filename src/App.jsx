@@ -3,8 +3,8 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
-import Login from "./components/views/Login"
-import Register from "./components/views/Register"
+import Login from "./components/views/usuario/Login"
+import Register from "./components/views/usuario/Register"
 import Inicio from "./components/views/Inicio"
 import Administrador from "./components/views/Administrador"
 import AcercaDe from "./components/views/AcercaDe"
