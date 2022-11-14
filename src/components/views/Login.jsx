@@ -20,34 +20,21 @@ const Login = () => {
         <Form.Group className="mb-3">
           <Form.Label>Email*</Form.Label>
           <Form.Control
-            type="text"
+            type="email"
             placeholder="Ej: franco@gmail.com"
-            {...register("usuario", {
-              required: "El usuario es obligatorio",
-              minLength: {
-                value: 2,
-                message: "La cantidad de caracteres minimos es 2",
-              },
-              maxLength: {
-                value: 20,
-                message: "La cantidad maxima de caracteres es 100",
-              },
+            {...register("email", {
+              required: "El email es obligatorio",
             })}
           ></Form.Control>
-          <Form className="text-danger">{errors.usuario?.message}</Form>
+          <Form className="text-danger">{errors.email?.message}</Form>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Contraseña*</Form.Label>
           <Form.Control
             type="pasword"
-            placeholder="Ej: holamundo123"
+            placeholder="Ej: @Holamundo123"
             {...register("contrasena", {
               required: "La contraseña es obligatorio",
-              pattern: {
-                value:
-                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/,
-                message: "Contraseña incorrecta",
-              },
             })}
           />
           <Form className="text-danger">{errors.contrasena?.message}</Form>
