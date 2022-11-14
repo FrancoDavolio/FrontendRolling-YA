@@ -10,6 +10,7 @@ import Error404 from "./components/views/Error404";
 import { useState } from "react";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
+import Register from "./components/views/usuario/Register";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenRollingYa")) || {};
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
@@ -26,6 +27,7 @@ function App() {
           path="/login"
           element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
         ></Route>
+        <Route exact path="/register" element={<Register></Register>}></Route>
         <Route
           path="/adiministrador/*"
           element={

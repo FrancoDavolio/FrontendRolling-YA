@@ -12,7 +12,7 @@ export const consultarUserAPi = async () => {
 
 export const crearUsuarioAPI = async (usuario) => {
   try {
-    const respuesta = await fetch(URL, {
+    const respuesta = await fetch(URL,{
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(usuario),

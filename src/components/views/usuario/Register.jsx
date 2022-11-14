@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { crearUsuarioAPI } from "../../helpers/queriesLogin";
 
-const Register = ({setUsuarioLogueado}) => {
+const Register = ({ setUsuarioLogueado }) => {
   const navigate = useNavigate();
   const {
     register,
@@ -21,9 +21,9 @@ const Register = ({setUsuarioLogueado}) => {
           "El usuario fue creado exitosamente",
           "success"
         );
-        localStorage.setItem('tokenRollingYa', JSON.stringify(datos));
-        setUsuarioLogueado(datos)
-        navigate("/administrador")
+        localStorage.setItem("tokenRollingYa", JSON.stringify(datos));
+        setUsuarioLogueado(datos);
+        navigate("/administrador");
       } else {
         Swal.fire("Ocurrio un error", "Intentelo mas tarde", "error");
       }

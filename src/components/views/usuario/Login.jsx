@@ -2,9 +2,9 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { login } from "../../helpers/queriesLogin"; 
+import { consultarUserAPi } from "../../helpers/queriesLogin";
 
-const Login = ({setUsuarioLogueado}) => {
+const Login = ({ setUsuarioLogueado }) => {
   const navigate = useNavigate();
   const {
     register,
@@ -13,23 +13,33 @@ const Login = ({setUsuarioLogueado}) => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    login(datos).then((respuesta) => {
-      if (respuesta.status === 200) {
-        Swal.fire(
-          "Bienvenido",
-          `Gracias por contar con nosotros, ${datos.nombre}`,
-          "success"
-        );
-        localStorage.setItem(
-          "tokenRollingYa",
-          JSON.stringify(respuesta)
-        );
-        setUsuarioLogueado(respuesta)
-        navigate("/administrador");
+    consultarUserAPi(datos).then((respuesta) => {
+      const encontrarEmail = respuesta.find(
+        (user) => user.email === datos.email
+      );
+      if (encontrarEmail) {
+        if (encontrarEmail.contrasena === datos.contrasena) {
+          Swal.fire(
+            "Bienvenido",
+            `Gracias por contar con nosotros, ${encontrarEmail.nombre}`,
+            "success"
+          );
+          localStorage.setItem(
+            "tokenRollingYa",
+            JSON.stringify(encontrarEmail.nombre)
+          );
+          navigate = "/administrador";
+        } else {
+          Swal.fire(
+            "Error",
+            `Contraseña incorrecta, vuelva a intentarlo`,
+            "error"
+          );
+        }
       } else {
         Swal.fire(
-          "Error",
-          `Contraseña incorrecta, vuelva a intentarlo`,
+          "Email incorrecto",
+          `No encontramos un email con ese nombre, vuelve a intentarlo`,
           "error"
         );
       }
@@ -65,8 +75,8 @@ const Login = ({setUsuarioLogueado}) => {
         <Button variant="primary" type="submit">
           Guardar
         </Button>
-        <Button className="ms-3" onClick={() => navigate("/login")}>
-        ¿No estas registrado?
+        <Button className="ms-3" onClick={() => navigate("/register")}>
+          ¿No estas registrado?
         </Button>
       </Form>
     </Container>

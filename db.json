@@ -1,10 +1,16 @@
 {
-    "usuarios":[
-        {
-            "nombre":"franco",
-            "email":"francodavolio12@gmial.com",
-            "contrasena":"holamundo123",
-            "id":1
-        }
-    ]
+  "usuarios": [
+    {
+      "nombre": "Blacky",
+      "email": "blacky12@gmail.com",
+      "contrasena": "@Holamundo123",
+      "id": 2
+    },
+    {
+      "nombre": "Franco",
+      "email": "francodavolio12@gmail.com",
+      "contrasena": "@Holamundo123",
+      "id": 3
+    }
+  ]
 }
