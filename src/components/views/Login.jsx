@@ -31,7 +31,7 @@ const Login = () => {
         <Form.Group className="mb-3">
           <Form.Label>Contraseña*</Form.Label>
           <Form.Control
-            type="pasword"
+            type="password"
             placeholder="Ej: @Holamundo123"
             {...register("contrasena", {
               required: "La contraseña es obligatorio",
