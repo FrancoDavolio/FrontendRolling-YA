@@ -1,7 +1,10 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -9,8 +12,7 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    console.log("desde mi funsion submit");
-    console.log(datos);
+    
   };
 
   return (
@@ -41,6 +43,9 @@ const Login = () => {
         </Form.Group>
         <Button variant="primary" type="submit">
           Guardar
+        </Button>
+        <Button className="ms-3" onClick={() => navigate("/login")}>
+        ¿No estas registrado?
         </Button>
       </Form>
     </Container>
