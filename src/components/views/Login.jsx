@@ -1,7 +1,7 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-const Login = () => {
+const Login = ({setUsuarioLogueado}) => {
   const {
     register,
     handleSubmit,
