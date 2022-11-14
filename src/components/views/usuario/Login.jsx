@@ -1,7 +1,10 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = ({setUsuarioLogueado}) => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -9,8 +12,6 @@ const Login = ({setUsuarioLogueado}) => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    console.log("desde mi funsion submit");
-    console.log(datos);
   };
 
   return (
@@ -20,40 +21,30 @@ const Login = ({setUsuarioLogueado}) => {
         <Form.Group className="mb-3">
           <Form.Label>Email*</Form.Label>
           <Form.Control
-            type="text"
+            type="email"
             placeholder="Ej: franco@gmail.com"
-            {...register("usuario", {
-              required: "El usuario es obligatorio",
-              minLength: {
-                value: 2,
-                message: "La cantidad de caracteres minimos es 2",
-              },
-              maxLength: {
-                value: 20,
-                message: "La cantidad maxima de caracteres es 100",
-              },
+            {...register("email", {
+              required: "El email es obligatorio",
             })}
           ></Form.Control>
-          <Form className="text-danger">{errors.usuario?.message}</Form>
+          <Form className="text-danger">{errors.email?.message}</Form>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Contraseña*</Form.Label>
           <Form.Control
-            type="pasword"
-            placeholder="Ej: holamundo123"
+            type="password"
+            placeholder="Ej: @Holamundo123"
             {...register("contrasena", {
               required: "La contraseña es obligatorio",
-              pattern: {
-                value:
-                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/,
-                message: "Contraseña incorrecta",
-              },
             })}
           />
           <Form className="text-danger">{errors.contrasena?.message}</Form>
         </Form.Group>
         <Button variant="primary" type="submit">
           Guardar
+        </Button>
+        <Button className="ms-3" onClick={() => navigate("/login")}>
+        ¿No estas registrado?
         </Button>
       </Form>
     </Container>
