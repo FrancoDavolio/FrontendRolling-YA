@@ -12,6 +12,27 @@ const Login = ({setUsuarioLogueado}) => {
   } = useForm();
 
   const onSubmit = (datos) => {
+    login(datos).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire(
+          "Bienvenido",
+          `Gracias por contar con nosotros, ${datos.nombre}`,
+          "success"
+        );
+        localStorage.setItem(
+          "tokenRollingYa",
+          JSON.stringify(respuesta)
+        );
+        setUsuarioLogueado(respuesta)
+        navigate("/administrador");
+      } else {
+        Swal.fire(
+          "Error",
+          `Contraseña incorrecta, vuelva a intentarlo`,
+          "error"
+        );
+      }
+    });
   };
 
   return (

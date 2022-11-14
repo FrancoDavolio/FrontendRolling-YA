@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
-import Login from "./components/views/Login";
+import Login from "./components/views/usuario/Login";
 import Inicio from "./components/views/Inicio";
 import Detalle from "./components/views/Detalle";
 import Error404 from "./components/views/Error404";
