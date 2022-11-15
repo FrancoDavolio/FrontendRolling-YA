@@ -26,8 +26,9 @@ const Login = ({ setUsuarioLogueado }) => {
           );
           localStorage.setItem(
             "tokenRollingYa",
-            JSON.stringify(encontrarEmail.nombre)
+            JSON.stringify(encontrarEmail.nombre, encontrarEmail.perfil)
           );
+          setUsuarioLogueado(encontrarEmail);
           navigate("/");
         } else {
           Swal.fire(

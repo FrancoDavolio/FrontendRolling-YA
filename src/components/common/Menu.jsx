@@ -1,62 +1,62 @@
-import Nav from "react-bootstrap/Nav";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
-  const navegacion = useNavigate();
+  const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("tokenRollingYa");
     setUsuarioLogueado({});
-    navegacion("/");
+    navigate("/login");
   };
+
   return (
-    <header>
-      <Nav className="bg-danger py-3">
-        <Nav.Item as={Link} to="/" className="ms-3 nav-link text-light">
-          <h2>Cafeteria</h2>
-        </Nav.Item>
-        <Nav.Item className="ms-1">
+    <Navbar bg="danger" expand="lg">
+      <Navbar.Brand as={Link} to="/" className="ms-3 text-light">
+        <h3>Cafeteria</h3>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="py-1">
           <NavLink to="/" className="nav-item nav-link text-light">
             Inicio
           </NavLink>
-        </Nav.Item>
-
-        <Nav.Item className="ms-1">
-          <NavLink to="/login" className="nav-item nav-link text-light">
-            Login
-          </NavLink>
-        </Nav.Item>
-        <Nav.Item>
-          <NavLink to="/register" className="nav-item nav-link text-light">
-            Registrarse
-          </NavLink>
-        </Nav.Item>
-        {usuarioLogueado.nombre ? (
-          <>
-            <NavLink to="/administrador" className="nav-item nav-link">
-              Administrar
-            </NavLink>
-            <Button variant="dark" onClick={logout}></Button>
-          </>
-        ) : (
-          <NavLink to="/login" className="nav-item nav-link"></NavLink>
-        )}
-        {/* <Nav.Item>
-          <NavLink
-            to="/administrar"
-            className="nav-item nav-link ms-2 text-light"
-          >
-            Administrar
-          </NavLink>
-        </Nav.Item> */}
-
-        {/* <Nav.Item className="ms-2">
-          <NavLink to="/register" className="nav-item nav-link ms-2 text-light">
-            Register
-          </NavLink>
-        </Nav.Item> */}
-      </Nav>
-    </header>
+          {usuarioLogueado.nombre ? (
+            usuarioLogueado.perfil == "cliente" ? (
+              <>
+                <NavLink to="/pedidos" className="nav-item nav-link text-light">
+                  Pedidos
+                </NavLink>
+                <Button onClick={logout()}>
+                  Cerrar Sección
+                </Button>
+              </>
+            ) : (
+              <>
+                <NavLink
+                  to="/administrador"
+                  className="nav-item nav-link text-light"
+                >
+                  Administrar
+                </NavLink>
+                <Button  onClick={logout}>
+                  Cerrar Sección
+                </Button>
+              </>
+            )
+          ) : (
+            <>
+              <NavLink to="/login" className="nav-item nav-link text-light">
+                Login
+              </NavLink>
+              <NavLink to="/register" className="nav-item nav-link text-light">
+                Registrarse
+              </NavLink>
+            </>
+          )}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

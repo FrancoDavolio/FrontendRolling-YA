@@ -35,6 +35,7 @@ export const login = async (usuario) => {
       status: respuesta.status,
       mensaje: datos.mensaje,
       nombre: datos.nombre,
+      perfil: datos.perfil,
       token: datos.token,
       uid: datos.uid,
     }

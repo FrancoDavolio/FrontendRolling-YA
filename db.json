@@ -31,6 +31,30 @@
       "perfil": "cliente",
       "estado": "pendiente",
       "id": 5
+    },
+    {
+      "nombre": "Cami",
+      "email": "camila@gmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 6
+    },
+    {
+      "nombre": "Franco2",
+      "email": "francodavolio@gmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 7
+    },
+    {
+      "nombre": "Hola",
+      "email": "holamundo@gmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "admin",
+      "estado": "confirmado",
+      "id": 8
     }
   ]
 }

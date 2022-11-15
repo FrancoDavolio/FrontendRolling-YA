@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -11,23 +12,75 @@ const Register = ({ setUsuarioLogueado }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [usuarios, setUsuarios] = useState([]);
 
   const onSubmit = (datos) => {
-    console.log(datos);
-    crearUsuarioAPI(datos).then((respuesta) => {
-      if (respuesta.status === 201) {
-        Swal.fire(
-          "Usuario creado",
-          "El usuario fue creado exitosamente",
-          "success"
-        );
-        localStorage.setItem("tokenRollingYa", JSON.stringify(datos));
-        setUsuarioLogueado(datos);
-        navigate("/");
-      } else {
-        Swal.fire("Ocurrio un error", "Intentelo mas tarde", "error");
-      }
-    });
+    const verificacionNombre = usuarios.find(
+      (usuario) => usuario.nombre === datos.nombre
+    );
+    const verificacionEmail = usuarios.find(
+      (usuario) => usuario.email === datos.email
+    );
+    if (verificacionNombre) {
+      Swal.fire(
+        "Este usuario es existente",
+        "Prueba registrarte con otro nombre de usuario",
+        "error"
+      );
+      return;
+    } else if (verificacionEmail) {
+      Swal.fire(
+        "Este email es existente",
+        "Prueba registrarte con otro email",
+        "error"
+      );
+      return;
+    } else {
+      crearUsuarioAPI(datos).then((respuesta) => {
+        if (respuesta.status === 201) {
+          setUsuarios([
+            ...usuarios,
+            {
+              nombre: datos.nombre,
+              email: datos.email,
+              contrasena: datos.contrasena,
+              perfil: datos.perfil,
+              estado:datos.estado,
+              id: datos.id,
+            },
+          ]);
+          Swal.fire(
+            `Te registraste correctamente, ${datos.nombre}`,
+            "Inicia sesion con tu nueva cuenta.",
+            "success"
+          );
+          localStorage.setItem("tokenRollingYa", JSON.stringify(datos.nombre, datos.perfil));
+          setUsuarioLogueado(datos.perfil);
+          navigate("/");
+        } else {
+          Swal.fire(
+            `Hubo un error inesperado`,
+            "Intentelo nuevamente en breve.",
+            "error"
+          );
+        }
+      });
+    }
+
+    // crearUsuarioAPI(datos).then((respuesta) => {
+    //   if (respuesta.status === 201) {
+    //     Swal.fire(
+    //       "Usuario creado",
+    //       "El usuario fue creado exitosamente",
+    //       "success"
+    //     );
+    //     localStorage.setItem("tokenRollingYa", JSON.stringify(respuesta));
+    //     setUsuarioLogueado(respuesta);
+    //     navigate("/");
+    //   } else {
+    //     Swal.fire("Ocurrio un error", "Intentelo mas tarde", "error");
+    //   }
+    // });
   };
 
   return (
