@@ -21,17 +21,8 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <NavLink to="/" className="nav-item nav-link text-light">
             Inicio
           </NavLink>
-          {usuarioLogueado.nombre ? (
-            usuarioLogueado.perfil == "cliente" ? (
-              <>
-                <NavLink to="/pedidos" className="nav-item nav-link text-light">
-                  Pedidos
-                </NavLink>
-                <Button onClick={logout()}>
-                  Cerrar Sección
-                </Button>
-              </>
-            ) : (
+          {usuarioLogueado.email? (
+            usuarioLogueado.contrasena === "@Holamundo123" ? (
               <>
                 <NavLink
                   to="/administrador"
@@ -39,9 +30,14 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 >
                   Administrar
                 </NavLink>
-                <Button  onClick={logout}>
-                  Cerrar Sección
-                </Button>
+                <Button onClick={logout}>Cerrar Sección</Button>
+              </>
+            ) : (
+              <>
+                <NavLink to="/pedidos" className="nav-item nav-link text-light">
+                  Pedidos
+                </NavLink>
+                <Button onClick={logout}>Cerrar Sección</Button>
               </>
             )
           ) : (

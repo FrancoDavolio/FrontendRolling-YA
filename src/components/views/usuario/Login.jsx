@@ -14,21 +14,18 @@ const Login = ({ setUsuarioLogueado }) => {
 
   const onSubmit = (datos) => {
     consultarUserAPi(datos).then((respuesta) => {
-      const encontrarEmail = respuesta.find(
+      const encontrarUsuario = respuesta.find(
         (user) => user.email === datos.email
       );
-      if (encontrarEmail) {
-        if (encontrarEmail.contrasena === datos.contrasena) {
+      if (encontrarUsuario) {
+        if (encontrarUsuario.contrasena === datos.contrasena) {
           Swal.fire(
             "Bienvenido",
-            `Gracias por contar con nosotros, ${encontrarEmail.nombre}`,
+            `Gracias por contar con nosotros, ${encontrarUsuario.nombre}`,
             "success"
           );
-          localStorage.setItem(
-            "tokenRollingYa",
-            JSON.stringify(encontrarEmail.nombre, encontrarEmail.perfil)
-          );
-          setUsuarioLogueado(encontrarEmail);
+          localStorage.setItem("tokenRollingYa", JSON.stringify(datos));
+          setUsuarioLogueado(datos);
           navigate("/");
         } else {
           Swal.fire(

@@ -1,12 +1,12 @@
 {
   "usuarios": [
     {
-      "nombre": "Blacky",
-      "email": "blacky12@gmail.com",
-      "contrasena": "@Holamundo123",
+      "nombre": "Cami",
+      "email": "camila@gmail.com",
+      "contrasena": "@Hola1234",
       "perfil": "cliente",
       "estado": "confirmado",
-      "id": 2
+      "id": 1
     },
     {
       "nombre": "Franco",
@@ -14,47 +14,7 @@
       "contrasena": "@Holamundo123",
       "perfil": "admin",
       "estado": "confirmado",
-      "id": 3
-    },
-    {
-      "nombre": "Juan",
-      "email": "juan@gmail.com",
-      "contrasena": "@Holamundo123",
-      "perfil": "cliente",
-      "estado": "confirmado",
-      "id": 4
-    },
-    {
-      "nombre": "Matias",
-      "email": "afghaipfh@asdas.com",
-      "contrasena": "@Holamundo123",
-      "perfil": "cliente",
-      "estado": "pendiente",
-      "id": 5
-    },
-    {
-      "nombre": "Cami",
-      "email": "camila@gmail.com",
-      "contrasena": "@Holamundo123",
-      "perfil": "cliente",
-      "estado": "confirmado",
-      "id": 6
-    },
-    {
-      "nombre": "Franco2",
-      "email": "francodavolio@gmail.com",
-      "contrasena": "@Holamundo123",
-      "perfil": "cliente",
-      "estado": "confirmado",
-      "id": 7
-    },
-    {
-      "nombre": "Hola",
-      "email": "holamundo@gmail.com",
-      "contrasena": "@Holamundo123",
-      "perfil": "admin",
-      "estado": "confirmado",
-      "id": 8
+      "id": 2
     }
   ]
 }
