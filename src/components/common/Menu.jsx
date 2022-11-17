@@ -11,30 +11,27 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   };
 
   return (
-    <Navbar bg="danger" expand="lg">
-      <Navbar.Brand as={Link} to="/" className="ms-3 text-light">
+    <Navbar className="blanco" expand="lg">
+      <Navbar.Brand as={Link} to="/" className="ms-3">
         <h3>Cafeteria</h3>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="py-1">
-          <NavLink to="/" className="nav-item nav-link text-light">
+          <NavLink to="/" className="nav-item nav-link ms-3">
             Inicio
           </NavLink>
-          {usuarioLogueado.email? (
+          {usuarioLogueado.email ? (
             usuarioLogueado.contrasena === "@Holamundo123" ? (
               <>
-                <NavLink
-                  to="/administrador"
-                  className="nav-item nav-link text-light"
-                >
+                <NavLink to="/administrador" className="nav-item nav-link ms-3">
                   Administrar
                 </NavLink>
                 <Button onClick={logout}>Cerrar Sección</Button>
               </>
             ) : (
               <>
-                <NavLink to="/pedidos" className="nav-item nav-link text-light">
+                <NavLink to="/pedidos" className="nav-item nav-link ms-3">
                   Pedidos
                 </NavLink>
                 <Button onClick={logout}>Cerrar Sección</Button>
@@ -42,10 +39,10 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
             )
           ) : (
             <>
-              <NavLink to="/login" className="nav-item nav-link text-light">
+              <NavLink to="/login" className="nav-item nav-link ms-3">
                 Login
               </NavLink>
-              <NavLink to="/register" className="nav-item nav-link text-light">
+              <NavLink to="/register" className="nav-item nav-link ms-3">
                 Registrarse
               </NavLink>
             </>
