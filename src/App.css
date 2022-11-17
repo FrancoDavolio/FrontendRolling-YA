@@ -3,14 +3,19 @@
     flex-direction: column;
     min-height: 100vh;
 }
+body{
+    background-color:rgb(207,10,44);
+  }
 
 .mainSection{
     flex-grow: 1;
 }
 
 .caruselInicio{
-    object-fit: cover;
+   object-fit: cover;
     height: 30rem;
+    width: 100%;
+
 }
 .tituloCarusel{
    display: flex;
@@ -23,12 +28,26 @@
     margin-bottom: 8rem;
 }
 
-.imgRestaurant{
-   border-radius: 50%;
-}
+
 .colorTitulosCard{
-    color: black;
+    color: rgb(0,0,0);
     box-shadow: 0px 0px 0px 0px;
     font: initial;
     font-size: 200%;
 }
+
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    z-index: 0;
+    transform: skewY(6deg);
+    transform-origin: top right;
+  }
+
