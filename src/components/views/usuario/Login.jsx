@@ -1,4 +1,4 @@
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -46,37 +46,68 @@ const Login = ({ setUsuarioLogueado }) => {
 
   return (
     <Container className="mainSection">
-      <h1 className="text-center my-3">Login</h1>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group className="mb-3">
-          <Form.Label>Email*</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Ej: franco@gmail.com"
-            {...register("email", {
-              required: "El email es obligatorio",
-            })}
-          ></Form.Control>
-          <Form className="text-danger">{errors.email?.message}</Form>
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Contraseña*</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Ej: @Holamundo123"
-            {...register("contrasena", {
-              required: "La contraseña es obligatorio",
-            })}
-          />
-          <Form className="text-danger">{errors.contrasena?.message}</Form>
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Iniciar Seccion
+      <h1 className="text-center my-3 display-2 poppins text-light">
+        Bienvenido a RollingYa!
+      </h1>
+      <section className="d-flex justify-content-center">
+        <Card
+          style={{ width: "30rem", height: "24rem" }}
+          className="borde rojo"
+        >
+          <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form.Group className="mb-4">
+              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins">
+                Correo electrónico
+              </Form.Label>
+              <div className="d-flex justify-content-center">
+                <Form.Control
+                  className="input"
+                  type="email"
+                  placeholder="ejemplo@gmail.com"
+                  {...register("email", {
+                    required: "El email es obligatorio",
+                  })}
+                ></Form.Control>
+              </div>
+              <Form className="text-danger">{errors.email?.message}</Form>
+            </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label className="mb-4 mt-1 ms-4 fs-3 poppins">
+                Contraseña
+              </Form.Label>
+              <div className="d-flex justify-content-center">
+                <Form.Control
+                  className="input"
+                  type="password"
+                  placeholder="@Holamundo123"
+                  {...register("contrasena", {
+                    required: "La contraseña es obligatorio",
+                  })}
+                />
+              </div>
+              <Form className="text-danger">{errors.contrasena?.message}</Form>
+            </Form.Group>
+            <div className="text-center">
+              <Button
+                className="text-light negro"
+                type="submit"
+                variant="dark"
+              >
+                Iniciar Seccion
+              </Button>
+            </div>
+          </Form>
+        </Card>
+      </section>
+      <div className="text-center my-5">
+        <Button
+          className="ms-3 text-light negro"
+          onClick={() => navigate("/register")}
+          variant="dark"
+        >
+          ¿No estas registrado? Registrate aqui.
         </Button>
-        <Button className="ms-3" onClick={() => navigate("/register")}>
-          ¿No estas registrado?
-        </Button>
-      </Form>
+      </div>
     </Container>
   );
 };

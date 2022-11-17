@@ -12,6 +12,8 @@ import RutasAdmin from "./components/routes/RutasAdmin";
 import Register from "./components/views/usuario/Register";
 import Pedidos from "./components/views/Pedidos"
 import { useState } from "react";
+import SeparadorSuperior from "./components/common/SeparadorSuperior";
+import SeparadorInferior from "./components/common/SeparadorInferior";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenRollingYa")) || {};
@@ -23,6 +25,7 @@ function App() {
         usuarioLogueado={usuarioLogueado}
         setUsuarioLogueado={setUsuarioLogueado}
       ></Menu>
+      <SeparadorSuperior></SeparadorSuperior>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
@@ -49,6 +52,7 @@ function App() {
         ></Route>
         <Route exact path="*" element={<Error404></Error404>}></Route>
       </Routes>
+      <SeparadorInferior></SeparadorInferior>
       <Footer></Footer>
     </BrowserRouter>
   );
