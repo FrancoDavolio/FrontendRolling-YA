@@ -12,7 +12,9 @@ import { cargaMenu, open_close_menu } from "../helpers/menuAdmin";
 import { useEffect } from "react";
 
 const Administrador = () => {
-  
+  useEffect(() => {
+    cargaMenu();
+  }, [])
   
 
   return (
