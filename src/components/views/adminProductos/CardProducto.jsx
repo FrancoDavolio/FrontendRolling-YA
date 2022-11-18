@@ -20,7 +20,7 @@ const CardProducto = ({ producto }) => {
                 <Link className="btn btn-danger" to={`/detalle-producto/${id}`}>
                 Ver mas
                 </Link>
-                <Link className="btn btn-danger" to={`/administrar/editar/${id}`}>
+                <Link className="btn btn-danger" to={`/administrar/productos/editar/${id}`}>
                 Editar
                 </Link>
                 <Button variant="danger" onClick={() => {}}>

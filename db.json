@@ -2,11 +2,11 @@
   "productos": [
     {
       "nombreProducto": "café",
-      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "precio": 300,
-      "categoria": "bebida-caliente",
+      "precio": "3",
       "detalle": "esto es un producto",
-      "estado":"si",
+      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "estado": "si",
+      "categoria": "bebida-caliente",
       "id": 1
     },
     {
@@ -15,16 +15,16 @@
       "precio": 250,
       "categoria": "dulce",
       "detalle": "esto es un producto",
-      "estado":"si",
+      "estado": "si",
       "id": 2
     },
     {
       "nombreProducto": "licuado",
-      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "precio": 450,
+      "detalle": "esto ya no es un producto",
+      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "estado": "si",
       "categoria": "bebida-fria",
-      "detalle": "esto es un producto",
-      "estado":"si",
       "id": 3
     },
     {
@@ -33,7 +33,7 @@
       "precio": 400,
       "categoria": "bebida-caliente",
       "detalle": "esto es un producto",
-      "estado":"si",
+      "estado": "si",
       "id": 4
     },
     {
@@ -42,7 +42,7 @@
       "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "categoria": "bebida-caliente",
       "detalle": "esto es un producto",
-      "estado":"si",
+      "estado": "si",
       "id": 6
     },
     {
@@ -51,7 +51,7 @@
       "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "categoria": "dulce",
       "detalle": "esto es un producto",
-      "estado":"si",
+      "estado": "si",
       "id": 8
     }
   ],

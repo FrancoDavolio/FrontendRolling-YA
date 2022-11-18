@@ -11,6 +11,7 @@ import Administrador from "./components/views/Administrador";
 import { AdminUsuarios } from "./components/views/adminPages/AdminUsuarios";
 import { AdminProductos } from "./components/views/adminPages/AdminProductos";
 import { AdminPedidos } from "./components/views/adminPages/AdminPedidos";
+import { EditarProducto } from "./components/views/adminProductos/EditarProducto";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenCafeBenito")) || {};
@@ -57,6 +58,13 @@ function App() {
         path="/administrar/pedidos"
         element={
           <Administrador option={"pedidos"}></Administrador>
+        }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/productos/editar/:id"
+        element={
+          <EditarProducto></EditarProducto>
         }
         ></Route>
       </Routes>

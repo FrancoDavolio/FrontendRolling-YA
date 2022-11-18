@@ -26,7 +26,7 @@ const  mainOption = () => {
       }else if(option==="pedidos"){
         
       }else{
-        return <h1>BIENVENIDO A ADMIN</h1>
+        return <h1>BIENVENIDO A ADMIN 😎</h1>
       }
    }
   return (

@@ -11,3 +11,33 @@ export const consultaAPI = async () => {
       return false;
     }
   };
+
+export const obtenerProducto = async (id) => { 
+    try {
+      const respuesta = await fetch(`http://localhost:3004/productos/${id}`);
+      const productoEncontrado = {
+        dato: await respuesta.json(),
+        status:  respuesta.status
+      };
+      return productoEncontrado;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+ }
+
+ export const editarProductoAPI = async (id, producto) => {
+  try {
+    const respuesta = await fetch(`http://localhost:3004/productos/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(producto),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
