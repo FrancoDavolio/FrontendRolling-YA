@@ -35,28 +35,28 @@ function App() {
           exact
           path="/administrar"
           element={
-            <Administrador></Administrador>
+            <Administrador option={"admin"}></Administrador>
           }
         ></Route>
         <Route
         exact
         path="/administrar/usuarios"
         element={
-          <AdminUsuarios></AdminUsuarios>
+          <Administrador option={"usuarios"}></Administrador>
         }
         ></Route>
         <Route
         exact
         path="/administrar/productos"
         element={
-          <AdminProductos></AdminProductos>
+          <Administrador option={"productos"}></Administrador>
         }
         ></Route>
         <Route
         exact
         path="/administrar/pedidos"
         element={
-          <AdminPedidos></AdminPedidos>
+          <Administrador option={"pedidos"}></Administrador>
         }
         ></Route>
       </Routes>

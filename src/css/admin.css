@@ -150,3 +150,7 @@ header{
         left: -80px;
     }
 }
+
+table{
+    color: white !important;
+}
