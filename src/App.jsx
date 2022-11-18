@@ -8,6 +8,9 @@ import Inicio from "./components/views/Inicio";
 import Register from "./components/views/usuario/Register";
 import { useState } from "react";
 import Administrador from "./components/views/Administrador";
+import { AdminUsuarios } from "./components/views/adminPages/AdminUsuarios";
+import { AdminProductos } from "./components/views/adminPages/AdminProductos";
+import { AdminPedidos } from "./components/views/adminPages/AdminPedidos";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenCafeBenito")) || {};
@@ -34,6 +37,27 @@ function App() {
           element={
             <Administrador></Administrador>
           }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/usuarios"
+        element={
+          <AdminUsuarios></AdminUsuarios>
+        }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/productos"
+        element={
+          <AdminProductos></AdminProductos>
+        }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/pedidos"
+        element={
+          <AdminPedidos></AdminPedidos>
+        }
         ></Route>
       </Routes>
       {/* <Footer></Footer> */}
