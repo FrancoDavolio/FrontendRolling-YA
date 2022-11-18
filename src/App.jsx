@@ -5,51 +5,38 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Login from "./components/views/usuario/Login";
 import Inicio from "./components/views/Inicio";
-import Detalle from "./components/views/Detalle";
-import Error404 from "./components/views/Error404";
-import RutasProtegidas from "./components/routes/RutasProtegidas";
-import RutasAdmin from "./components/routes/RutasAdmin";
 import Register from "./components/views/usuario/Register";
-import Pedidos from "./components/views/Pedidos"
 import { useState } from "react";
+import Administrador from "./components/views/Administrador";
 
 function App() {
-  const usuario = JSON.parse(localStorage.getItem("tokenRollingYa")) || {};
+  const usuario = JSON.parse(localStorage.getItem("tokenCafeBenito")) || {};
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
 
   return (
+    // administramos las rutas
     <BrowserRouter>
-      <Menu
+      {/* <Menu
         usuarioLogueado={usuarioLogueado}
         setUsuarioLogueado={setUsuarioLogueado}
-      ></Menu>
+      ></Menu> */}
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
-        <Route exact path="/pedidos" element={<Pedidos></Pedidos>}></Route>
         <Route
           exact
           path="/login"
           element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
         ></Route>
+        {/*Rutas protegidas*/}
         <Route
           exact
-          path="/register"
+          path="/administrar"
           element={
-            <Register setUsuarioLogueado={setUsuarioLogueado}></Register>
+            <Administrador></Administrador>
           }
         ></Route>
-        <Route
-          path="/adiministrador/*"
-          element={
-            <RutasProtegidas>
-              <RutasAdmin setUsuarioLogueado={setUsuarioLogueado}></RutasAdmin>
-            </RutasProtegidas>
-          }
-        ></Route>
-        <Route exact path="*" element={<Error404></Error404>}></Route>
       </Routes>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </BrowserRouter>
   );
 }
