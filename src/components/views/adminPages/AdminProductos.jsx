@@ -1,10 +1,10 @@
 import React from 'react'
 import { consultaAPI } from '../../helpers/prodAdmin';
 import { useEffect, useState } from "react";
-import { Button, Table } from "react-bootstrap";
+import { Button, Row, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import {Link} from 'react-router-dom';
-import ItemProducto from '../adminProductos/ItemProducto';
+import CardProducto from '../adminProductos/CardProducto';
 
 export const AdminProductos = () => {
   const [productos, setProductos] = useState([]);
@@ -34,24 +34,11 @@ export const AdminProductos = () => {
         </Link>
       </div>
       <hr />
-      <Table responsive bordered hover>
-        <thead>
-          <tr>
-            <th>Cod</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>URL de Imagen</th>
-            <th>Categoria</th>
-            <th>Opciones</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          {
-            productos.map((producto)=> <ItemProducto key={producto.id} producto={producto} setProductos={setProductos}></ItemProducto> )
-          }
-        </tbody>
-      </Table>
+      <Row xs={1} md={4}>
+        {
+            productos.map((producto)=> <CardProducto key={producto.id} producto={producto} setProductos={setProductos}></CardProducto>)            
+        }
+      </Row>
     </section>
   );
 }

@@ -5,6 +5,8 @@
       "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "precio": 300,
       "categoria": "bebida-caliente",
+      "detalle": "esto es un producto",
+      "estado":"si",
       "id": 1
     },
     {
@@ -12,6 +14,8 @@
       "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "precio": 250,
       "categoria": "dulce",
+      "detalle": "esto es un producto",
+      "estado":"si",
       "id": 2
     },
     {
@@ -19,6 +23,8 @@
       "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "precio": 450,
       "categoria": "bebida-fria",
+      "detalle": "esto es un producto",
+      "estado":"si",
       "id": 3
     },
     {
@@ -26,6 +32,8 @@
       "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "precio": 400,
       "categoria": "bebida-caliente",
+      "detalle": "esto es un producto",
+      "estado":"si",
       "id": 4
     },
     {
@@ -33,6 +41,8 @@
       "precio": "60",
       "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "categoria": "bebida-caliente",
+      "detalle": "esto es un producto",
+      "estado":"si",
       "id": 6
     },
     {
@@ -40,6 +50,8 @@
       "precio": "65",
       "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "categoria": "dulce",
+      "detalle": "esto es un producto",
+      "estado":"si",
       "id": 8
     }
   ],
