@@ -19,21 +19,12 @@
       "id": 2
     },
     {
-      "nombreProducto": "licuado",
-      "precio": 450,
-      "detalle": "esto ya no es un producto",
-      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "estado": "si",
-      "categoria": "bebida-fria",
-      "id": 3
-    },
-    {
-      "nombreProducto": "café expreso",
-      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "nombreProducto": "café rico",
       "precio": 400,
-      "categoria": "bebida-caliente",
       "detalle": "esto es un producto",
+      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estado": "si",
+      "categoria": "bebida-caliente",
       "id": 4
     },
     {

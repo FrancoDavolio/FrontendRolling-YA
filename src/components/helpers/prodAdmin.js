@@ -41,3 +41,16 @@ export const obtenerProducto = async (id) => {
     return false;
   }
 };
+
+export const borrarProductoAPI = async (id) => {
+  // console.log(URL)
+  try {
+    const respuesta = await fetch(`http://localhost:3004/productos/${id}`, {
+      method: "DELETE"
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
