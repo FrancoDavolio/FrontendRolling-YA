@@ -16,5 +16,15 @@
       "estado": "confirmado",
       "id": 2
     }
+  ],
+  "pedidos": [
+    {
+      "nombre": "Pedido 1",
+      "id": 1
+    },
+    {
+      "nombre": "Pedido 2",
+      "id": 2
+    }
   ]
 }
