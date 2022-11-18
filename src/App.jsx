@@ -14,6 +14,7 @@ import Pedidos from "./components/views/Pedidos"
 import { useState } from "react";
 import SeparadorSuperior from "./components/common/SeparadorSuperior";
 import SeparadorInferior from "./components/common/SeparadorInferior";
+import AcercaDe from "./components/views/AcercaDe"
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenRollingYa")) || {};
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
         <Route exact path="/pedidos" element={<Pedidos></Pedidos>}></Route>
+        <Route exact path="/nosotros" element={<AcercaDe></AcercaDe>}></Route>
         <Route
           exact
           path="/login"
