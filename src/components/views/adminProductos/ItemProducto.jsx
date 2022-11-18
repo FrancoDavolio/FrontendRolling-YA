@@ -1,9 +1,10 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Button } from "react-bootstrap";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-export const ItemUsuario = ({usuario}) => {
-const {id, nombre, email, perfil, estado} = {...usuario} 
+export const ItemUsuario = ({ usuario }) => {
+  const { id, nombre, email, perfil, estado } = { ...usuario };
   return (
     <tr>
       <td>{id}</td>
@@ -12,12 +13,14 @@ const {id, nombre, email, perfil, estado} = {...usuario}
       <td>{perfil}</td>
       <td>{estado}</td>
       <td>
-        <Link className="btn btn-warning" to={`/administrar/editar/${id}`}>
-          Editar
-        </Link>
-        <Button variant="danger" onClick={()=>{}}>
-          Borrar
-        </Button>
+        <div className="d-flex justify-content-center">
+          <Link className="btn btn-warning" to={`/administrar/editar/${id}`}>
+            <FaEdit></FaEdit>
+          </Link>
+          <Button variant="danger" onClick={() => {}}>
+            <FaTrash></FaTrash>
+          </Button>
+        </div>
       </td>
     </tr>
   );
