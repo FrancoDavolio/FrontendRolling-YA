@@ -3,7 +3,7 @@ import { Col, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { consultaAPI } from "../../helpers/usersAdmin";
-import { ItemUsuario } from "../adminProductos/ItemProducto";
+import { ItemUsuario } from "../adminUsuarios/ItemUsuario";
 
 export const AdminUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
