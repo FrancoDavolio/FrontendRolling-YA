@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import { cargaMenu, open_close_menu } from "../helpers/menuAdmin";
 import { useEffect } from "react";
 import { AdminUsuarios } from "./adminPages/AdminUsuarios";
+import { AdminProductos } from "./adminPages/AdminProductos";
 
 const Administrador = ({option}) => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const  mainOption = () => {
       if (option==="usuarios") {
         return <AdminUsuarios></AdminUsuarios>
       } else if(option==="productos"){
-        
+        return <AdminProductos></AdminProductos>
       }else if(option==="pedidos"){
         
       }else{
@@ -61,7 +62,7 @@ const  mainOption = () => {
               <h4>Usuarios</h4>
             </div>
           </NavLink>
-          <NavLink className="options__link">
+          <NavLink end to={"/administrar/productos"} className="options__link">
             <div className="option">
               <FaProductHunt
                 className="icon-option"
