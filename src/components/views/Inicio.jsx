@@ -77,20 +77,22 @@ const Inicio = () => {
           ))}
         </Row>
         <hr />
-        <section className="d-flex">
-          <div className="w-50">
+        <Row xs={12} md={12} lg={6}>
+
+        
+          <div className="divFrase">
             <img
               src="https://restaurantden.com/wp-content/uploads/2015/07/food-trends-1.jpg"
               className="imgFrase"
             />
           </div>
-          <div className="p-5 text-center">
+          <div className="p-5 text-center divFrase">
             <p className="fraseInicio">
               "UN RESTAURANTE QUE FOMENTA <br /> LAS RELACIONES <br /> Y
               ALIMENTA CORAZONES."
             </p>
           </div>
-        </section>
+          </Row>
       </Container>
     </>
   );

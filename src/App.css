@@ -64,4 +64,21 @@ body{
    
 }
 
+.divFrase{
+    width: 50%;
+}
+
+
+@media all and (max-width:756px){
+    .imgFrase{
+        width: 100%;
+         border-radius: 15px;
+        
+     }
+
+     .divFrase{
+        width: 100%;
+    }
+}
+
 
