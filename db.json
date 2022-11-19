@@ -15,6 +15,14 @@
       "perfil": "admin",
       "estado": "confirmado",
       "id": 2
+    },
+    {
+      "nombre": "Majo",
+      "email": "majoaguero@hotmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 3
     }
   ]
 }
