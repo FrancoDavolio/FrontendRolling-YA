@@ -48,11 +48,11 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               <NavLink to="/login" className="nav-item nav-link ms-3 ">
                 Login
               </NavLink>
-            </>
-          )}
           <NavLink to="/" className="nav-item nav-link ms-3 ">
             Inicio
           </NavLink>
+            </>
+          )}
           <Link to="/" className="ms-3">
             <img src="./Logo_fondo_blanco" alt="logo de rolling ya" />
           </Link>
