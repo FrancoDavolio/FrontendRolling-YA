@@ -5,7 +5,6 @@ import { Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import CardProducto from "./adminProductos/CardProducto";
 
-
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
 
@@ -22,9 +21,10 @@ const Inicio = () => {
       <Carousel fade>
         <Carousel.Item>
           <img
-            className=" caruselInicio"
-            src="https://media.istockphoto.com/id/938742222/es/foto/pizza-de-pepperoni-cheesy.jpg?s=612x612&w=0&k=20&c=GUwbHCrMdnpHGmTzHVPk2U9flWi3WgMVdfdOeBMU00E="
-            alt="First slide"
+            className=" caruselInicio "
+            src="https://moinhoglobo.com.br/wp-content/uploads/2019/02/01-massa-pizza-1024x683.png"
+            alt="Pizza slide"
+            height={750}
           />
           <Carousel.Caption>
             <h2 className="tituloCarusel  ">¡PEDÍ LO QUE QUIERAS!</h2>
@@ -34,8 +34,9 @@ const Inicio = () => {
         <Carousel.Item>
           <img
             className="caruselInicio"
-            src="https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Second slide"
+            src="https://www.elindependiente.com.ar/elindependiente/1.0/img/552848634.jpg"
+            alt="Papas slide"
+            height={750}
           />
 
           <Carousel.Caption>
@@ -46,8 +47,9 @@ const Inicio = () => {
         <Carousel.Item>
           <img
             className="caruselInicio"
-            src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Third slide"
+            src="https://assets.unileversolutions.com/recipes-v2/232055.jpg"
+            alt="hambruesa slider"
+            height={750}
           />
 
           <Carousel.Caption>
@@ -56,8 +58,6 @@ const Inicio = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-      
 
       <br />
       <hr />
@@ -76,6 +76,21 @@ const Inicio = () => {
             ></CardProducto>
           ))}
         </Row>
+        <hr />
+        <section className="d-flex">
+          <div className="w-50">
+            <img
+              src="https://restaurantden.com/wp-content/uploads/2015/07/food-trends-1.jpg"
+              className="imgFrase"
+            />
+          </div>
+          <div className="p-5 text-center">
+            <p className="fraseInicio">
+              "UN RESTAURANTE QUE FOMENTA <br /> LAS RELACIONES <br /> Y
+              ALIMENTA CORAZONES."
+            </p>
+          </div>
+        </section>
       </Container>
     </>
   );
