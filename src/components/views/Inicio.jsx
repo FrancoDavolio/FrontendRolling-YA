@@ -5,6 +5,7 @@ import { Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import CardProducto from "./adminProductos/CardProducto";
 
+
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
 
@@ -56,12 +57,14 @@ const Inicio = () => {
         </Carousel.Item>
       </Carousel>
 
+      
+
       <br />
       <hr />
 
       <Container>
         <div className="text-center">
-          <h1 className="text-light display-4">Elegí tu menú</h1>
+          <h1 className="text-light  fw-bold">Productos Rolling-YA</h1>
         </div>
 
         <Row xs={12} md={6} lg={3}>
