@@ -2,23 +2,22 @@ import React from "react";
 
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row } from "react-bootstrap";
-import Figure from "react-bootstrap/Figure";
-import { Link } from "react-router-dom";
-import { CardImg, Card, Button } from "react-bootstrap";
-import Inicio2 from "./Inicio/Inicio2";
+import { useEffect, useState } from "react";
+import CardProducto from "./adminProductos/CardProducto";
 
 const Inicio = () => {
+  const [productos, setProductos] = useState([]);
 
+  //useEffect(()=>{
+  //consultarAPI().then((respuesta)=>{
+  // console.log(respuesta)
+  // setProductos(respuesta);
+  // })
 
+  //},[])
 
   return (
-    
     <>
-
-    
-
-
-
       <Carousel fade>
         <Carousel.Item>
           <img
@@ -56,48 +55,24 @@ const Inicio = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
       <br />
-        <hr />
-   
+      <hr />
 
-        
       <Container>
+        <div className="text-center">
+          <h1 className="text-light display-4">Elegí tu menú</h1>
+        </div>
 
-<Row xs={12} md={6} lg={3}>
-
-
-
-        
-        <Link>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=600"
-            />
-          </Card>
-        </Link>
-        
-        <Link>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.pexels.com/photos/10342005/pexels-photo-10342005.jpeg?auto=compress&cs=tinysrgb&w=600"
-            />
-          </Card>
-        </Link>
-
-        
-        <Link>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=600"
-            />
-          </Card>
-        </Link>
+        <Row xs={12} md={6} lg={3}>
+          {productos.map((producto) => (
+            <CardProducto
+              key={producto._id}
+              producto={producto}
+              setProductos={setProductos}
+            ></CardProducto>
+          ))}
         </Row>
-
-       
       </Container>
     </>
   );
