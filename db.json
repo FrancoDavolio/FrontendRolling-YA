@@ -44,6 +44,15 @@
       "detalle": "esto es un producto",
       "estado": "si",
       "id": 8
+    },
+    {
+      "nombreProducto": "Medialuna",
+      "precio": "777",
+      "detalle": "esto es un producto",
+      "imagen": "https://media.ldlc.com/r1600/ld/products/00/05/93/02/LD0005930210_1.jpg",
+      "estado": "no",
+      "categoria": "bebida-caliente",
+      "id": 9
     }
   ],
   "usuarios": [

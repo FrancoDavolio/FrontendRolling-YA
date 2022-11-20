@@ -54,3 +54,19 @@ export const borrarProductoAPI = async (id) => {
     return false;
   }
 };
+
+export const crearProductoAPI = async (producto) => {
+  try {
+    const respuesta = await fetch("http://localhost:3004/productos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(producto),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
