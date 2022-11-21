@@ -1,21 +1,30 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { FaEdit, FaTrash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaCheck, FaEdit, FaTrash } from "react-icons/fa";
+import { consultaAPI, estadoPedidoAPI } from "../../helpers/pedidosAdmin";
 
-export const ItemPedido = ({ pedido }) => {
-  const { id, nombre } = { ...pedido };
+export const ItemPedido = ({ pedido, setPedidos }) => {
+  const { id, nombre, estado } = { ...pedido };
+
+  const estadoPedido = () => { 
+    estadoPedidoAPI(id,pedido).then((respuesta) => { 
+      if(respuesta.status === 200){
+        consultaAPI().then((respuesta)=>{
+          setPedidos(respuesta);
+        })
+      }else{
+      }
+     })
+  }
   return (
     <tr>
       <td>{id}</td>
       <td>{nombre}</td>
+      <td>{estado}</td>
       <td>
         <div className="d-flex justify-content-center">
-          <Link className="btn btn-warning" to={`/administrar/editar/${id}`}>
-            <FaEdit></FaEdit>
-          </Link>
-          <Button variant="danger" onClick={() => {}}>
-            <FaTrash></FaTrash>
+          <Button className="btn btn-warning" onClick={estadoPedido}>
+            <FaCheck></FaCheck>
           </Button>
         </div>
       </td>

@@ -20,10 +20,12 @@
   "pedidos": [
     {
       "nombre": "Pedido 1",
+      "estado": "realizado",
       "id": 1
     },
     {
       "nombre": "Pedido 2",
+      "estado": "realizado",
       "id": 2
     }
   ]

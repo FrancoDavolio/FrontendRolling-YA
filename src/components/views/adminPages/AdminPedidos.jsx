@@ -38,11 +38,25 @@ export const AdminPedidos = () => {
           <tr>
             <th>Id</th>
             <th>Nombre</th>
+            <th>Estado</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          {pedidos.map((pedido) => <ItemPedido key={pedido.id} pedido={pedido}></ItemPedido>)}
+          {pedidos.map((pedido) => {if(pedido.estado==="pendiente"){ <ItemPedido key={pedido.id} pedido={pedido} setPedidos={setPedidos}></ItemPedido>}})}
+        </tbody>
+      </Table>
+      <Table responsive bordered>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pedidos.map((pedido) => {if(pedido.estado==="realizado"){ <ItemPedido key={pedido.id} pedido={pedido} setPedidos={setPedidos}></ItemPedido>}})}
         </tbody>
       </Table>
     </section>
