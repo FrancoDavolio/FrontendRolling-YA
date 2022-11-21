@@ -3,7 +3,7 @@ import { Form, Button, Container, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { crearUsuarioAPI } from "../../helpers/queriesLogin";
+import { consultarUserAPi, crearUsuarioAPI } from "../../helpers/queriesLogin";
 
 const Register = ({ setUsuarioLogueado }) => {
   const navigate = useNavigate();
@@ -12,34 +12,40 @@ const Register = ({ setUsuarioLogueado }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [usuarios, setUsuarios] = useState([]);
 
   const onSubmit = (datos) => {
-    crearUsuarioAPI(datos).then((respuesta) => {
-      if (respuesta.status === 201) {
-        setUsuarios([
-          ...usuarios,
-          {
-            nombre: datos.nombre,
-            email: datos.email,
-            contrasena: datos.contrasena,
-            perfil: datos.perfil,
-            estado: datos.estado,
-            id: datos.id,
-          },
-        ]);
-        Swal.fire(
-          `Te registraste correctamente, ${datos.nombre}`,
-          "Bienvenido.",
-          "success"
-        );
-        localStorage.setItem("tokenRollingYa", JSON.stringify(datos));
-        setUsuarioLogueado(datos);
-        navigate("/");
+    let i = 0;
+    consultarUserAPi(datos).then((respuesta) => {
+      let arrayEmail = [];
+      respuesta.map((usuario) => {
+        arrayEmail[i] = usuario.email;
+        i++;
+      });
+      if (arrayEmail.includes(datos.email) === false) {
+        crearUsuarioAPI(datos).then((respuesta) => {
+          datos.perfil = "cliente";
+          datos.estado = "confirmado"
+          if (respuesta.status === 201) {
+            Swal.fire(
+              `Te registraste correctamente, ${datos.nombre}`,
+              "Bienvenido.",
+              "success"
+            );
+            localStorage.setItem("tokenRollingYa", JSON.stringify(datos, datos.perfil, datos.estado));
+            setUsuarioLogueado(datos, datos.perfil);
+            navigate("/");
+          } else {
+            Swal.fire(
+              `Hubo un error inesperado`,
+              "Intentelo nuevamente en breve.",
+              "error"
+            );
+          }
+        });
       } else {
         Swal.fire(
-          `Hubo un error inesperado`,
-          "Intentelo nuevamente en breve.",
+          `Este email ya esta registrado`,
+          "Intente con otro email.",
           "error"
         );
       }
@@ -140,20 +146,6 @@ const Register = ({ setUsuarioLogueado }) => {
                 ></Form.Control>
               </div>
               <Form className="text-danger">{errors.contrasena?.message}</Form>
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                type="hidden"
-                value={"cliente"}
-                {...register("perfil")}
-              ></Form.Control>
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                type="hidden"
-                value={"confirmado"}
-                {...register("estado")}
-              ></Form.Control>
             </Form.Group>
             <div className="text-center">
               <Button
