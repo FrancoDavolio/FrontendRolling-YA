@@ -24,7 +24,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="py-1 justify-content-between w-100">
           {usuarioLogueado.email ? (
-            usuarioLogueado.contrasena === "@Holamundo123" ? (
+            usuarioLogueado.perfil === "admin" ? (
               <>
                 <Button onClick={logout} variant="" >
                   Cerrar sesión
