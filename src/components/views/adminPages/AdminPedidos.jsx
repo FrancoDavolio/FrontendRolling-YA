@@ -43,7 +43,16 @@ export const AdminPedidos = () => {
           </tr>
         </thead>
         <tbody>
-          {pedidos.map((pedido) => {if(pedido.estado==="pendiente"){ <ItemPedido key={pedido.id} pedido={pedido} setPedidos={setPedidos}></ItemPedido>}})}
+          {pedidos.map((pedido) => {
+            if (pedido.estado == "pendiente") {
+              return (<ItemPedido
+                key={pedido.id}
+                pedido={pedido}
+                setPedidos={setPedidos}
+              ></ItemPedido>)
+              
+            }
+          })}
         </tbody>
       </Table>
       <Table responsive bordered>
@@ -56,7 +65,17 @@ export const AdminPedidos = () => {
           </tr>
         </thead>
         <tbody>
-          {pedidos.map((pedido) => {if(pedido.estado==="realizado"){ <ItemPedido key={pedido.id} pedido={pedido} setPedidos={setPedidos}></ItemPedido>}})}
+        {pedidos.map((pedido) => {
+                if (pedido.estado === "realizado") {
+                  return (
+                    <ItemPedido
+                    key={pedido.id}
+                    pedido={pedido}
+                    setPedidos={setPedidos}
+                    ></ItemPedido>
+                  );
+                }
+        })}
         </tbody>
       </Table>
     </section>
