@@ -1,20 +1,12 @@
 {
   "usuarios": [
     {
-      "nombre": "Cami",
-      "email": "camila@gmail.com",
-      "contrasena": "@Hola1234",
-      "perfil": "cliente",
-      "estado": "confirmado",
-      "id": 1
-    },
-    {
       "nombre": "Franco",
       "email": "francodavolio12@gmail.com",
       "contrasena": "@Holamundo123",
       "perfil": "admin",
       "estado": "confirmado",
-      "id": 2
+      "id": 1
     }
   ]
 }
