@@ -17,6 +17,7 @@ const Login = ({ setUsuarioLogueado }) => {
       const encontrarUsuario = respuesta.find(
         (user) => user.email === datos.email
       );
+      datos.perfil = encontrarUsuario.perfil;
       if (encontrarUsuario) {
         if (encontrarUsuario.contrasena === datos.contrasena) {
           Swal.fire(
@@ -24,8 +25,8 @@ const Login = ({ setUsuarioLogueado }) => {
             `Gracias por contar con nosotros, ${encontrarUsuario.nombre}`,
             "success"
           );
-          localStorage.setItem("tokenRollingYa", JSON.stringify(datos));
-          setUsuarioLogueado(datos);
+          localStorage.setItem("tokenRollingYa", JSON.stringify(datos, datos.perfil));
+          setUsuarioLogueado(datos, datos.perfil);
           navigate("/");
         } else {
           Swal.fire(
@@ -88,11 +89,7 @@ const Login = ({ setUsuarioLogueado }) => {
               <Form className="text-danger">{errors.contrasena?.message}</Form>
             </Form.Group>
             <div className="text-center">
-              <Button
-                className="text-light negro"
-                type="submit"
-                variant="dark"
-              >
+              <Button className="text-light negro" type="submit" variant="dark">
                 Iniciar Seccion
               </Button>
             </div>

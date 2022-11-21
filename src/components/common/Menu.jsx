@@ -24,7 +24,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="py-1 d-flex justify-content-between">
           {usuarioLogueado.email ? (
-            usuarioLogueado.contrasena === "@Holamundo123" ? (
+            usuarioLogueado.perfil === "admin" ? (
               <>
                 <Button onClick={logout} variant="" className="col-4">Cerrar sesión</Button>
                 <NavLink to="/administrador" className="nav-item nav-link ms-3 col-4">
