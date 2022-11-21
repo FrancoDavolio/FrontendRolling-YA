@@ -21,6 +21,7 @@ function App() {
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
 
   return (
+    
     <BrowserRouter>
       <Menu
         usuarioLogueado={usuarioLogueado}

@@ -6,6 +6,9 @@
     flex-direction: column;
     min-height: 100vh;
 }
+body{
+    background-color:rgb(207,10,44);
+  }
 
 .mainSection{
     flex-grow: 1;
@@ -31,3 +34,51 @@
 .poppins{
     font-family: 'Poppins', sans-serif;
 }
+
+
+/*Pagina inicio*/
+
+.caruselInicio{
+    width: 100%;
+    object-fit: cover;
+    
+    
+    
+}
+
+.carousel-indicators{
+    display: none;
+} 
+
+.fraseInicio{
+    font-size: 30px;
+    color: white;
+    font-style:italic;
+    font-family: cursive;
+
+}
+
+.imgFrase{
+   width: 100%;
+    border-radius: 15px;
+   
+}
+
+.divFrase{
+    width: 50%;
+}
+
+
+@media all and (max-width:756px){
+    .imgFrase{
+        width: 100%;
+         border-radius: 15px;
+        
+     }
+
+     .divFrase{
+        width: 100%;
+    }
+}
+
+

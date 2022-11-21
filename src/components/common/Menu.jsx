@@ -22,38 +22,45 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     <Navbar className="blanco" expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="py-1 d-flex justify-content-between">
+        <Nav className="py-1 justify-content-between w-100">
           {usuarioLogueado.email ? (
             usuarioLogueado.perfil === "admin" ? (
               <>
-                <Button onClick={logout} variant="" className="col-4">Cerrar sesión</Button>
-                <NavLink to="/administrador" className="nav-item nav-link ms-3 col-4">
+                <Button onClick={logout} variant="" >
+                  Cerrar sesión
+                </Button>
+                <NavLink
+                  to="/administrador"
+                  className="nav-item nav-link ms-3 "
+                >
                   Administrar
                 </NavLink>
               </>
             ) : (
               <>
-                <Button onClick={logout} variant="" className="col-4">Cerrar sesión</Button>
+                <Button onClick={logout} variant="" >
+                  Cerrar sesión
+                </Button>
               </>
             )
           ) : (
             <>
-              <NavLink to="/login" className="nav-item nav-link ms-3 col-4">
+              <NavLink to="/login" className="nav-item nav-link ms-3 ">
                 Login
               </NavLink>
-            </>
-          )}
-          <NavLink to="/" className="nav-item nav-link ms-3 col-4">
+          <NavLink to="/" className="nav-item nav-link ms-3 ">
             Inicio
           </NavLink>
-          <Link to="/" className="col-4">
+            </>
+          )}
+          <Link to="/" className="ms-3">
             <img src="./Logo_fondo_blanco" alt="logo de rolling ya" />
           </Link>
-          <NavLink to="/nosotros" className="nav-item nav-link ms-3 col-4">
+          <NavLink to="/nosotros" className="nav-item nav-link ms-3">
             Nosotros
           </NavLink>
-          <NavLink to="/pedidos" className="nav-item nav-link ms-3 col-4">
-          <GiShoppingCart className="fs-4"></GiShoppingCart>
+          <NavLink to="/pedidos" className="nav-item nav-link ms-3 ">
+            <GiShoppingCart className="fs-4"></GiShoppingCart>
           </NavLink>
         </Nav>
       </Navbar.Collapse>
