@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import { cargaLink, cargaMenu, open_close_menu } from "../helpers/menuAdmin";
 import { useEffect } from "react";
 import { AdminUsuarios } from "./adminPages/AdminUsuarios";
+import { AdminPedidos } from "./adminPages/AdminPedidos";
 
 const Administrador = ({option}) => {
   useEffect(() => {
@@ -24,7 +25,7 @@ const  mainOption = () => {
       } else if(option==="productos"){
         
       }else if(option==="pedidos"){
-        
+        return <AdminPedidos></AdminPedidos>
       }else{
         return <h1>BIENVENIDO A ADMIN</h1>
       }
