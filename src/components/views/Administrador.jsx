@@ -12,6 +12,7 @@ import { cargaLink, cargaMenu, open_close_menu } from "../helpers/menuAdmin";
 import { useEffect } from "react";
 import { AdminUsuarios } from "./adminPages/AdminUsuarios";
 import { AdminPedidos } from "./adminPages/AdminPedidos";
+import { AdminProductos } from "./adminPages/AdminProductos";
 
 const Administrador = ({option}) => {
   useEffect(() => {
@@ -23,11 +24,11 @@ const  mainOption = () => {
       if (option==="usuarios") {
         return <AdminUsuarios></AdminUsuarios>
       } else if(option==="productos"){
-        
+        return <AdminProductos></AdminProductos>
       }else if(option==="pedidos"){
         return <AdminPedidos></AdminPedidos>
       }else{
-        return <h1>BIENVENIDO A ADMIN</h1>
+        return <h1>BIENVENIDO A ADMIN 😎</h1>
       }
    }
   return (

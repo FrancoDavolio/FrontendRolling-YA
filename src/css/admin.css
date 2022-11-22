@@ -154,3 +154,7 @@ header{
 table{
     color: white !important;
 }
+
+.card{
+    background: black;
+}

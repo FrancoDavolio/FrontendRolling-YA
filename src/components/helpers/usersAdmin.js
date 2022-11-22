@@ -2,6 +2,7 @@ const URL = process.env.REACT_APP_API_CAFE_USER;
 
 
 export const consultaAPI = async () =>{
+    console.log(URL)
     try {
         let respuesta = await fetch(URL);
         let listaUsuarios = await respuesta.json();
