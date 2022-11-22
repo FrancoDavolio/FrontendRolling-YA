@@ -1,7 +1,7 @@
 import React from 'react'
 import { consultaAPI } from '../../helpers/prodAdmin';
 import { useEffect, useState } from "react";
-import { Button, Row, Table } from "react-bootstrap";
+import {  Row } from "react-bootstrap";
 import Swal from "sweetalert2";
 import {Link} from 'react-router-dom';
 import CardProducto from '../adminProductos/CardProducto';

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { consultaAPI } from "../../helpers/pedidosAdmin";
 import { ItemPedido } from "../adminPedidos/ItemPedido";
@@ -41,7 +40,7 @@ export const AdminPedidos = () => {
         </thead>
         <tbody>
           {pedidos.map((pedido) => {
-            if (pedido.estado == "pendiente") {
+            if (pedido.estado === "pendiente") {
               return (<ItemPedido
                 key={pedido.id}
                 pedido={pedido}

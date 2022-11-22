@@ -1,4 +1,4 @@
-const URL = process.env.REACT_APP_API_CAFE_PROD;
+// const URL = process.env.REACT_APP_API_CAFE_PROD;
 
 
 export const consultaAPI = async () => {

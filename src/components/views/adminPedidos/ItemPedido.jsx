@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { FaCheck, FaEdit, FaTrash } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import { consultaAPI, estadoPedidoAPI } from "../../helpers/pedidosAdmin";
 
 export const ItemPedido = ({ pedido, setPedidos }) => {
