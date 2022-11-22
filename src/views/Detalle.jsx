@@ -10,6 +10,7 @@ const Detalle = () => {
         </p>
       </section>
       <section className="d-flex justify-content-be
+      
       tween">
         <div className="col-4">
 <Card style={{ width: "25rem"}}>
@@ -35,6 +36,3 @@ const Detalle = () => {
     </Container>
   )
 }
-
-<title className="centred text"></title>
-<HTMLHeadingElement = "description"
