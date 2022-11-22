@@ -45,10 +45,10 @@ const  mainOption = () => {
 
       <div className="menu__side" id="menu_side">
         <div className="div__name">
-          <div className="name__page">
+          <NavLink end to={"/"} className="name__page">
             <FaPizzaSlice className="icon__name"></FaPizzaSlice>
             <h4>RollingYA</h4>
-          </div>
+          </NavLink>
         </div>
 
         <div className="options__menu">
@@ -64,7 +64,7 @@ const  mainOption = () => {
               <h4>Usuarios</h4>
             </div>
           </NavLink>
-          <NavLink className={option=="productos"?"options__link selected":"options__link"}>
+          <NavLink end to={"/administrar/productos"} className={option=="productos"?"options__link selected":"options__link"}>
             <div className="option">
               <FaProductHunt
                 className="icon-option"
@@ -73,7 +73,7 @@ const  mainOption = () => {
               <h4>Productos</h4>
             </div>
           </NavLink>
-          <NavLink className={option=="pedidos"?"options__link selected":"options__link"}>
+          <NavLink end to={"/administrar/pedidos"} className={option=="pedidos"?"options__link selected":"options__link"}>
             <div className="option">
               <FaShoppingCart
                 className="icon-option"

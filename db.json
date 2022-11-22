@@ -76,7 +76,7 @@
   "pedidos": [
     {
       "nombre": "Pedido 1",
-      "estado": "realizado",
+      "estado": "pendiente",
       "id": 1
     },
     {

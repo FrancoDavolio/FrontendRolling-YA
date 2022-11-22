@@ -28,9 +28,6 @@ export const AdminPedidos = () => {
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Pedidos</h1>
-        <Link className="btn btn-primary" to="/administrar/crear">
-          Agregar
-        </Link>
       </div>
       <hr />
       <Table responsive bordered>

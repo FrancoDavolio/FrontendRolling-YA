@@ -30,9 +30,9 @@ export const AdminUsuarios = () => {
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Usuarios</h1>
-        <Link className="btn btn-primary" to="/administrar/crear">
+        {/* <Link className="btn btn-primary" to="/administrar/crear">
           Agregar
-        </Link>
+        </Link> */}
       </div>
       <hr />
       <Row>
