@@ -31,29 +31,17 @@ function App() {
       <SeparadorSuperior></SeparadorSuperior>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
         <Route exact path="/pedidos" element={<Pedidos></Pedidos>}></Route>
         <Route exact path="/nosotros" element={<AcercaDe></AcercaDe>}></Route>
-        <Route
-          exact
-          path="/login"
-          element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
-        ></Route>
-        <Route
-          exact
-          path="/register"
-          element={
-            <Register setUsuarioLogueado={setUsuarioLogueado}></Register>
+        <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
+        <Route exact path="/register"element={<Register setUsuarioLogueado={setUsuarioLogueado}></Register>}></Route>
+        <Route exact path="/product/upload" component={Auth(UploadProductPage, true)}/>
+        <Route exact path="/product/:productid" component={Auth(DetailProductPage,null)}/>
+        <Route exact path="/adiministrador/*"element={<RutasProtegidas><RutasAdmin setUsuarioLogueado={setUsuarioLogueado}></RutasAdmin></RutasProtegidas>
+        
+          
           }
-        ></Route>
-        <Route
-          path="/adiministrador/*"
-          element={
-            <RutasProtegidas>
-              <RutasAdmin setUsuarioLogueado={setUsuarioLogueado}></RutasAdmin>
-            </RutasProtegidas>
-          }
-        ></Route>
+></Route>
         <Route exact path="*" element={<Error404></Error404>}></Route>
       </Routes>
       <SeparadorInferior></SeparadorInferior>

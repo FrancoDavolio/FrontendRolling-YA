@@ -1,0 +1,400 @@
+[33mcommit a087beac63550f74abe7e88e167dd2664e001af3[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Merge: be31c77 8b17b63
+Author: Leah <leahthomsen@gmail.com>
+Date:   Wed Nov 23 12:17:36 2022 -0300
+
+    creating the routes for product detail page and Product page
+
+[33mcommit 8b17b63fe42fb3d174471a423783134d3e970379[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Wed Nov 23 11:38:17 2022 -0300
+
+    agregue mas validaciones al email y corregi las de contraseña
+
+[33mcommit dc0bd985f43b88e3dcfd501537c32f68f2ca44f5[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Wed Nov 23 10:58:29 2022 -0300
+
+    cambie la posicion de datos perfil y cliente
+
+[33mcommit be31c77c1c8abe68bab5b3a914c4dcb305a24806[m
+Author: Leah <leahthomsen@gmail.com>
+Date:   Wed Nov 23 09:57:31 2022 -0300
+
+    adding image for details page
+
+[33mcommit 1fe607cc89afa3c7b15c845930f2505e9924486b[m
+Author: Leah <leahthomsen@gmail.com>
+Date:   Tue Nov 22 12:07:09 2022 -0300
+
+    updates so that i can retry git pull which is not working properly
+
+[33mcommit aac1af3f0e39bfda4690f095b3ba7a465fa47c6d[m
+Merge: 6b50b2d 0ab6ac2
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Mon Nov 21 12:33:39 2022 -0300
+
+    Merge pull request #9 from FrancoDavolio/inicio
+    
+    Inicio
+
+[33mcommit 0ab6ac2af908b63d3997a9e2c574e734671c1150[m[33m ([m[1;31morigin/inicio[m[33m)[m
+Merge: b526d41 6b50b2d
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Mon Nov 21 12:33:29 2022 -0300
+
+    Merge branch 'dev' into inicio
+
+[33mcommit 6b50b2dcb3898d5aaf07b83da162cca15d25b70a[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 21 12:30:08 2022 -0300
+
+    borre un usurar
+
+[33mcommit 904bf87e2111cc70d3ee5b94ed130c744896b5a7[m
+Merge: a54dcd2 b465de2
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Mon Nov 21 12:17:56 2022 -0300
+
+    Merge pull request #8 from FrancoDavolio/arreglosEnRegisteryLogin
+    
+    ya pude poner que cuando uno se registra no pueden haber dos email ig…
+
+[33mcommit b465de2d5828ec9715e8c883e841249219eb27fa[m[33m ([m[1;31morigin/arreglosEnRegisteryLogin[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 21 12:15:08 2022 -0300
+
+    ya pude poner que cuando uno se registra no pueden haber dos email iguales y cuando inicia sesion para saber si es admin o cliente seaa con el perfil del usuario
+
+[33mcommit 338d8179a972bf039fa4ef5b9017d4fa9946679f[m
+Author: Leah <leahthomsen@gmail.com>
+Date:   Sat Nov 19 21:05:41 2022 -0300
+
+    trialling some hamburger modals
+
+[33mcommit b526d41416f0ff8096e602b095244851fc03ddba[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 15:43:30 2022 -0300
+
+    ajuste detalles responsive
+
+[33mcommit b892cba9bd6ec1fa5b0cad6171e035a187f197c0[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 15:40:15 2022 -0300
+
+    ocult ruta inicio para mostrar ruta admin
+
+[33mcommit f2546362ec08536e06bd9037a794008947280882[m
+Merge: 01743a0 efe2f88
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 15:35:18 2022 -0300
+
+    agregaste archivo env de dbjason
+
+[33mcommit efe2f887da50b36c3ed3aa91d4070834616a0ef2[m
+Merge: 400e1e0 a54dcd2
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 15:17:26 2022 -0300
+
+    Merge branch 'dev' of https://github.com/FrancoDavolio/FrontendRolling-YA into dev
+
+[33mcommit 01743a05f07802a06f2e58ac087fc1fe0b61df99[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 15:17:03 2022 -0300
+
+    actualice rama dev
+
+[33mcommit a54dcd2f92422beee725d3a86f8a36c99de4c97c[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Sat Nov 19 15:13:09 2022 -0300
+
+    estoy por enviar el .env
+
+[33mcommit 923e704ea2fa3ccf78711baeed5b7f12e4a82577[m
+Merge: c6c94c2 400e1e0
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 14:30:33 2022 -0300
+
+    agrego seccion nosotros con slogan
+
+[33mcommit c6c94c2463060237b3b4140dc68455bab760c0aa[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 13:27:04 2022 -0300
+
+    cambios en el titulo productos
+
+[33mcommit 400e1e0fd097887f21d5dee53328a439c58d741d[m
+Merge: 88bfb6d 1ddf816
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 13:14:33 2022 -0300
+
+    descargue los datos de Nav y Footer
+
+[33mcommit c372b462d9c8a0377cdfac11986d48eb223456ab[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sat Nov 19 12:47:23 2022 -0300
+
+    arme la estructura de la logica para cada producto
+
+[33mcommit 1ddf816479ff3c5da8bc872c835edfa27fc1c701[m
+Merge: 85a8c70 2efac23
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Fri Nov 18 14:08:23 2022 -0300
+
+    Merge pull request #7 from FrancoDavolio/menu-footer
+    
+    Menu footer
+
+[33mcommit 2efac234822633b43f771bce6bfcbcc993074226[m[33m ([m[1;31morigin/menu-footer[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Fri Nov 18 14:07:21 2022 -0300
+
+    puse el logo en el footer
+
+[33mcommit 34d72fef1ac9551c4158cabc8e3f64002ce3ef00[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Fri Nov 18 14:00:06 2022 -0300
+
+    ya maquete un poco el menu y acomode las rutas
+
+[33mcommit 85a8c701899333cdd6375869369f81340a685106[m
+Merge: 56a8c9c df22720
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Thu Nov 17 20:46:57 2022 -0300
+
+    Merge pull request #6 from FrancoDavolio/separador
+    
+    cree los archivos separadores en la carpeta common y termine de maque…
+
+[33mcommit df22720106c2ff8f241491abd6918af14bb03255[m[33m ([m[1;31morigin/separador[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Thu Nov 17 20:46:04 2022 -0300
+
+    cree los archivos separadores en la carpeta common y termine de maquetar login y register
+
+[33mcommit 9fdbb5891ba0c0a1d4ccd8375a54c381cab6f20e[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Wed Nov 16 22:31:02 2022 -0300
+
+    se crearon las card con link de los productos y se puso el color de fonde de la pag inicio
+
+[33mcommit 56a8c9c678c51c1db7ea78ac90189ef5937aa351[m
+Merge: 93c5ddb 67c7ed9
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Tue Nov 15 13:45:59 2022 -0300
+
+    Merge pull request #5 from FrancoDavolio/rutasProtegidas
+    
+    Rutas protegidas
+
+[33mcommit 67c7ed94f7931a1e8cb36456e37fc73860ef799d[m[33m ([m[1;31morigin/rutasProtegidas[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Tue Nov 15 13:38:16 2022 -0300
+
+    pude solucionar el problema en el tema de los perfiles a la hora de hacer login
+
+[33mcommit cc76c34cd28ef61e846d827fe22e6492a632c70b[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Tue Nov 15 00:14:38 2022 -0300
+
+    ya realice la logica para cada tipo de usuario, me faltaria ver porq no hace nada cuando es cliente jeje
+
+[33mcommit bd5d6ace129cc34ccd9117e821468515cfa19850[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 18:49:51 2022 -0300
+
+    agregue dos imput de tipo hidden para el perfil y el estado del usuario
+
+[33mcommit 4d49eda32873a60ba9239474d40d734d16698de8[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 15:57:23 2022 -0300
+
+    ahora los botones de crear e iniciar me envian a las rutas q les pido
+
+[33mcommit 6083f04581e680eafaff0178f228efa3bcaf4a7f[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 15:53:08 2022 -0300
+
+    ya se puede loguar y crear usuarios, falta la logica para cuando un ususario es cliente y cuando es admin, tambien ver el tema de que los botones no me llevan a las rutas q les pido
+
+[33mcommit 406530f48fd8082e6409b226c41d470600f5cbb8[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Mon Nov 14 12:43:53 2022 -0300
+
+    se realizo parte del maquetado de la pagina inicio
+
+[33mcommit 9e3c8d2eb8d3fda32dc7daa5e64a1310101c4701[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 12:32:57 2022 -0300
+
+    corregi el link de login en Login
+
+[33mcommit dd9f480b2243779ad92376778eb9a7953384fc73[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 12:14:45 2022 -0300
+
+    corregi una parte de register
+
+[33mcommit 42c7339bf5fd80e29df1aa039de21815e1f5140c[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 12:06:40 2022 -0300
+
+    en esta rama cree la carpeta de rutas
+
+[33mcommit ecdd5fdb76463ad70f73bbac9944133b44ceadb3[m
+Merge: 44f121e 1dee2cc
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 12:01:01 2022 -0300
+
+    Merge branch 'logica/login' into devfranco
+
+[33mcommit 44f121ea256706a62cd363191dd7dc8f001c67a4[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 11:58:58 2022 -0300
+
+    estoy buscando un error
+
+[33mcommit a1e918fd28298b2db1c4c263d5bd068a0f7d19a7[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 11:52:05 2022 -0300
+
+    se protegieron las rutas
+
+[33mcommit 1dee2ccc2ac3a50ca5fd261007f4c57beee028fa[m[33m ([m[1;31morigin/logica/login[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 11:22:46 2022 -0300
+
+    meti los componentes login y register a la carpeta usuario
+
+[33mcommit 16fda4f06c174e31009afb92601e9e307e7e0224[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 11:17:24 2022 -0300
+
+    agregur la peticion para cuando el usuario se loguea
+
+[33mcommit c618479e9131f682fe7a50d2845372936ac4ac45[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 11:00:40 2022 -0300
+
+    corregi y agregue algunas cosas en login y register
+
+[33mcommit 2422f41f8027a2c52b2700f2d318abd9a67c7886[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 10:33:20 2022 -0300
+
+    cree la peticion post para cuando cree  los usuarios
+
+[33mcommit 2660d244c8cbb5c17fbb20d298e4ffbf50d7c8bc[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Mon Nov 14 10:29:39 2022 -0300
+
+    cree la peticion get para traer los datos de la api
+
+[33mcommit 65707195c4768eb90e90941b3608f50ef83008a0[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Sun Nov 13 22:54:09 2022 -0300
+
+    se maqueto carousel de pag inicio
+
+[33mcommit 88bfb6dbcd791297d089e2a53da1ed8753b55d89[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Fri Nov 11 21:46:55 2022 -0300
+
+    volvi a colocar el Menu/nav en app
+
+[33mcommit f283939520e7eb5486af217987b55a6ed90d6515[m
+Author: MajoA <majoaguero20@hotmail.comgit config --global user.name MajoAgit commit -m 'primer commit del proyecto de la panaderia''git config --global user.email majoaguero20@hotmail.com>
+Date:   Fri Nov 11 21:30:29 2022 -0300
+
+    borre el Menu/Nav duplicado que figuraba en App.jsx
+
+[33mcommit 93c5ddb8f514b3a46d2398803bc6380941dcaec8[m
+Merge: 9abe1de a24a40d
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Fri Nov 11 17:18:41 2022 -0300
+
+    Merge pull request #3 from FrancoDavolio/register
+    
+    Register y login
+
+[33mcommit a24a40da065e86b76bd33ce2621ab711fddacb57[m[33m ([m[1;31morigin/register[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Fri Nov 11 12:28:00 2022 -0300
+
+    cambie el nombre de la helpers login
+
+[33mcommit cc917ab8a9783117a0d205d31d61b67631e90bb4[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Fri Nov 11 12:22:15 2022 -0300
+
+    corregi alunas palabras mal escritas
+
+[33mcommit 10d8aec97892a2abf77bab25da4a762d8dda3366[m
+Merge: 5912224 6dd2d5e
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Fri Nov 11 11:59:47 2022 -0300
+
+    Merge branch 'login' into register
+
+[33mcommit 5912224d9f47cb42a80f0d1d2ebb34b78ae1fa24[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Fri Nov 11 11:59:36 2022 -0300
+
+    realice el maquetado de register
+
+[33mcommit 6dd2d5ea47c158d0b6a35ce0b64262e445be9636[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Thu Nov 10 20:31:42 2022 -0300
+
+    corregi una palabra mal escrita
+
+[33mcommit 6901e3c48203759470d18e2502cd86759aa46c06[m[33m ([m[1;31morigin/login[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Thu Nov 10 20:28:43 2022 -0300
+
+    me falto poner el onSubmit a la etiqueta form
+
+[33mcommit 823dea06564ad022222124db0697817326187cf8[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Thu Nov 10 20:27:06 2022 -0300
+
+    maquetado listo de login, todavia faltan cambios pero sirve para hacer la funcionalidad y back
+
+[33mcommit 9abe1dec5232586f8dbdd23190722566c8ad9a20[m
+Merge: 0fe851b 1aca612
+Author: FrancoDavolio <104332816+FrancoDavolio@users.noreply.github.com>
+Date:   Thu Nov 10 20:02:23 2022 -0300
+
+    Merge pull request #2 from FrancoDavolio/rutas
+    
+    Rutas
+
+[33mcommit 1aca612db85b1c1d0f2a07427e2872de3a967bcb[m[33m ([m[1;31morigin/rutas[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Thu Nov 10 19:58:43 2022 -0300
+
+    corregi unos errores en los nombres de los componentes crear y editar
+
+[33mcommit 7c7b5e4aec5935c137c75d29e9649e81cdc9483a[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Thu Nov 10 19:54:09 2022 -0300
+
+    cree todas las rutas para cada componente
+
+[33mcommit 0fe851bb8ba9555d29b3adf371451a8e5e6f60a9[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Wed Nov 9 16:42:15 2022 -0300
+
+    se agrego a los componentes menu y footer contenido
+
+[33mcommit 474838ccd5c1aef9b7b000bf7599f24b59f18820[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mdetalles[m[33m, [m[1;32m==set-upstream-to=origin/dev[m[33m)[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Wed Nov 9 16:40:15 2022 -0300
+
+    inicio de Proyecto final
+
+[33mcommit c64da54aa244e0d266e9c55bb19c3e171df7dfa1[m
+Author: francoDavolio <francodavolio12@gmail.com>
+Date:   Wed Nov 9 16:34:48 2022 -0300
+
+    Initialize project using Create React App
