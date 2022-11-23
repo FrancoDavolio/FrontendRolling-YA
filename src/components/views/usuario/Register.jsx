@@ -104,6 +104,14 @@ const Register = ({ setUsuarioLogueado }) => {
                   placeholder="Ej: Franco@gmail.com"
                   {...register("email", {
                     required: "El email es obligatorio",
+                    minLength: {
+                      value: 8,
+                      message: "La cantidad de caracteres minimos es 8",
+                    },
+                    maxLength: {
+                      value: 100,
+                      message: "La cantidad maxima de caracteres es 100",
+                    },
                     pattern: {
                       value:
                         /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
@@ -134,7 +142,7 @@ const Register = ({ setUsuarioLogueado }) => {
                     maxLength: {
                       value: 30,
                       message:
-                        "Su contraseña debe tener como 30 caracteres como maximo",
+                        "Su contraseña debe tener como 15 caracteres como maximo",
                     },
                     pattern: {
                       value:
