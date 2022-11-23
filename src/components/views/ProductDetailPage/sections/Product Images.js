@@ -2,13 +2,9 @@ import React, { useEffect, useState }from 'react';
 import ImageGallery from 'react-image-gallery';
 
 function ProductImages(props) {
-
     const [images, setImages] = useState()
 
     useEffect(()) => {
-
-    }, [])
-    
     if ( props.detail.images && props.detail.images.length > 0 {
         let images = [];
 
@@ -19,11 +15,9 @@ function ProductImages(props) {
                 thumbnail 'http://localhost:5500/$(item)'
             })
         })
-       setImages(images) 
-        
+       setImages(images)     
     }
-    
-    
+}, []}
     return (
         <div>
 

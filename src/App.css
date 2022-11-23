@@ -545,3 +545,20 @@ body{
 
 
 >>>>>>> 8b17b63fe42fb3d174471a423783134d3e970379
+/*LEAHS CSS* <div style={{ display:'flex', justifyContent: 'center'}}  incorrect style tag>*/
+.description {
+    display:'flex';
+    text align: center
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
