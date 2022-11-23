@@ -21,17 +21,17 @@ const Register = ({ setUsuarioLogueado }) => {
         arrayEmail[i] = usuario.email;
         i++;
       });
+      datos.perfil = "cliente";
+      datos.estado = "confirmado";
       if (arrayEmail.includes(datos.email) === false) {
         crearUsuarioAPI(datos).then((respuesta) => {
-          datos.perfil = "cliente";
-          datos.estado = "confirmado"
           if (respuesta.status === 201) {
             Swal.fire(
               `Te registraste correctamente, ${datos.nombre}`,
               "Bienvenido.",
               "success"
             );
-            localStorage.setItem("tokenRollingYa", JSON.stringify(datos, datos.perfil, datos.estado));
+            localStorage.setItem("tokenRollingYa", JSON.stringify(datos, datos.perfil));
             setUsuarioLogueado(datos, datos.perfil);
             navigate("/");
           } else {

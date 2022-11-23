@@ -90,7 +90,7 @@ const Login = ({ setUsuarioLogueado }) => {
             </Form.Group>
             <div className="text-center">
               <Button className="text-light negro" type="submit" variant="dark">
-                Iniciar Seccion
+                Iniciar Sesión
               </Button>
             </div>
           </Form>

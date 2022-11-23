@@ -3,7 +3,6 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { GiShoppingCart } from "react-icons/gi";
 
-
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const logo = (
     <img
@@ -26,7 +25,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
           {usuarioLogueado.email ? (
             usuarioLogueado.perfil === "admin" ? (
               <>
-                <Button onClick={logout} variant="" >
+                <Button onClick={logout} variant="">
                   Cerrar sesión
                 </Button>
                 <NavLink
@@ -38,9 +37,12 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </>
             ) : (
               <>
-                <Button onClick={logout} variant="" >
+                <Button onClick={logout} variant="">
                   Cerrar sesión
                 </Button>
+                <NavLink to="/" className="nav-item nav-link ms-3 ">
+                  Inicio
+                </NavLink>
               </>
             )
           ) : (
@@ -48,13 +50,17 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               <NavLink to="/login" className="nav-item nav-link ms-3 ">
                 Login
               </NavLink>
-          <NavLink to="/" className="nav-item nav-link ms-3 ">
-            Inicio
-          </NavLink>
+              <NavLink to="/" className="nav-item nav-link ms-3 ">
+                Inicio
+              </NavLink>
             </>
           )}
           <Link to="/" className="ms-3">
-            <img src="./Logo_fondo_blanco" alt="logo de rolling ya" />
+            <img
+              src="./Logo_fondo_blanco.png"
+              alt="logo de rolling ya"
+              width="60px"
+            />
           </Link>
           <NavLink to="/nosotros" className="nav-item nav-link ms-3">
             Nosotros

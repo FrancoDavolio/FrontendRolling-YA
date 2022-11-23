@@ -6,7 +6,6 @@
       "contrasena": "@Holamundo123",
       "perfil": "admin",
       "estado": "confirmado",
-
       "id": 1
     },
     {
@@ -16,7 +15,14 @@
       "perfil": "cliente",
       "estado": "confirmado",
       "id": 2
-
+    },
+    {
+      "nombre": "Camila",
+      "email": "camila@gmail.com",
+      "contrasena": "Cami123@",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 3
     }
   ]
 }
