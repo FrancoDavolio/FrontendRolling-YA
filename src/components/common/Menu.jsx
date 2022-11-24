@@ -2,7 +2,7 @@ import { Nav, Navbar, NavDropdown, NavItem } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { GiShoppingCart } from "react-icons/gi";
-
+import LogoPrincipal from "../../Assets/Logo_fondo_blanco.png"
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const logo = (
@@ -54,7 +54,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
             </>
           )}
           <Link to="/" className="ms-3">
-            <img src="./Logo_fondo_blanco" alt="logo de rolling ya" />
+            <img src={LogoPrincipal} alt="logo de rolling ya" width={75} />
           </Link>
           <NavLink to="/nosotros" className="nav-item nav-link ms-3">
             Nosotros

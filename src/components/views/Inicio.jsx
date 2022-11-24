@@ -3,18 +3,18 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import CardProducto from "./adminProductos/CardProducto";
-
+import CardProductosInicio from "./pagInicio/cardProductosInicio";
+import { consultaAPI } from "../helpers/prodAdmin";
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
 
-  //useEffect(()=>{
-  //consultarAPI().then((respuesta)=>{
-  // console.log(respuesta)
-  // setProductos(respuesta);
-  // })
+  useEffect(()=>{
+  consultaAPI().then((respuesta)=>{
+   
+   setProductos(respuesta);
+   })
 
-  //},[])
+  },[])
 
   return (
     <>
@@ -67,15 +67,18 @@ const Inicio = () => {
           <h1 className="text-light  fw-bold">Productos Rolling-YA</h1>
         </div>
 
-        <Row xs={12} md={6} lg={3}>
+
+        <Row xs={1} md={2} lg={4} >
           {productos.map((producto) => (
-            <CardProducto
+            <CardProductosInicio
               key={producto._id}
               producto={producto}
               setProductos={setProductos}
-            ></CardProducto>
+              
+            ></CardProductosInicio>
           ))}
         </Row>
+
         <hr />
         <Row xs={12} md={12} lg={6}>
 
@@ -88,7 +91,7 @@ const Inicio = () => {
           </div>
           <div className="p-5 text-center divFrase">
             <p className="fraseInicio">
-              "UN RESTAURANTE QUE FOMENTA <br /> LAS RELACIONES <br /> Y
+              "UNA EMPRESA QUE FOMENTA <br /> LAS RELACIONES <br /> Y
               ALIMENTA CORAZONES."
             </p>
           </div>
