@@ -80,23 +80,23 @@ const Inicio = () => {
         </Row>
 
         <hr />
-        <Row xs={12} md={12} lg={6}>
+        
 
-        <div className="giroImg">
-          <div className="divFrase">
+        <div className="giroImg row">
+          <div className="divFrase col-sm-12 col-md-12 col-lg-6">
             <img
               src="https://restaurantden.com/wp-content/uploads/2015/07/food-trends-1.jpg"
               className="imgFrase"
             />
           </div>
-          <div className="p-5 text-center divFrase">
+          <div className="p-5 text-center divFrase col-sm-12 col-md-12 col-lg-6">
             <p className="fraseInicio textInicio ">
               "UNA EMPRESA QUE FOMENTA <br /> LAS RELACIONES <br /> Y
               ALIMENTA CORAZONES."
             </p>
           </div>
           </div>
-          </Row>
+          
       </Container>
     </>
   );

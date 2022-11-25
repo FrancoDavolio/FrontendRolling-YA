@@ -52,7 +52,7 @@ body{
 } 
 
 .fraseInicio{
-    font-size: 30px;
+    font-size: 35px;
     color: white;
     font-style:italic;
     font-family: cursive;
@@ -79,6 +79,10 @@ body{
     transition: 200ms;
     border-radius: 15px;
 }
+.tarjetas:hover {
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+  }
 
 .imgTarjetas{
 width: 100%;
@@ -115,7 +119,10 @@ border-radius: 15px;
         flex-direction: column-reverse;
 
     }
-
+    .tarjetas:hover {
+        transform: scale(0.9);
+        transition: all 0.5s ease;
+      }
    
     
 }
@@ -142,6 +149,10 @@ border-radius: 15px;
         flex-direction: column-reverse;
 
     }
+    .tarjetas:hover {
+        transform: scale(0.9);
+        transition: all 0.5s ease;
+      }
 
 }
 
