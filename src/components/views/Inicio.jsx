@@ -64,7 +64,7 @@ const Inicio = () => {
 
       <Container>
         <div className="text-center">
-          <h1 className="text-light  fw-bold">Productos Rolling-YA</h1>
+          <h1 className="text-light  fw-bold ">PRODUCTOS ROLLING-YA</h1>
         </div>
 
 
@@ -82,7 +82,7 @@ const Inicio = () => {
         <hr />
         <Row xs={12} md={12} lg={6}>
 
-        
+        <div className="giroImg">
           <div className="divFrase">
             <img
               src="https://restaurantden.com/wp-content/uploads/2015/07/food-trends-1.jpg"
@@ -90,10 +90,11 @@ const Inicio = () => {
             />
           </div>
           <div className="p-5 text-center divFrase">
-            <p className="fraseInicio">
+            <p className="fraseInicio textInicio ">
               "UNA EMPRESA QUE FOMENTA <br /> LAS RELACIONES <br /> Y
               ALIMENTA CORAZONES."
             </p>
+          </div>
           </div>
           </Row>
       </Container>
