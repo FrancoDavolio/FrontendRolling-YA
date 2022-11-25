@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Productimages, from 'section'
 
-function DetailProductPage(){
+function DetalleProducto(){
 
     const productId = Props.match.params.productId
     const [Product, setProduct] = useState([])
