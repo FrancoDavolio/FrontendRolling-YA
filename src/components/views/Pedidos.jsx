@@ -1,4 +1,5 @@
-import React from 'react';
+import { Container, Row } from "react-bootstrap";
+import CardProducto from "./adminProductos/CardProducto";
 
 const Pedidos = () => {
     return (
@@ -19,7 +20,7 @@ const Pedidos = () => {
         <hr />
         <Row>
             <Div>
-                <h1>TOTAL</h1>
+                <h1>TOTAL </h1>
                 <button>Cancelar</button>
                 <button>Pedir</button>
 
