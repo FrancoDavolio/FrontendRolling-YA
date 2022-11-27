@@ -30,7 +30,7 @@ function App() {
       {/* <Menu
         usuarioLogueado={usuarioLogueado}
         setUsuarioLogueado={setUsuarioLogueado}
-      ></Menu>
+  ></Menu>*/}
       <SeparadorSuperior></SeparadorSuperior>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
