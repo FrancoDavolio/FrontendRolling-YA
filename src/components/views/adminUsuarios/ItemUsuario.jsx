@@ -12,16 +12,6 @@ export const ItemUsuario = ({ usuario }) => {
       <td>{email}</td>
       <td>{perfil}</td>
       <td>{estado}</td>
-      <td>
-        <div className="d-flex justify-content-center">
-          <Link className="btn btn-warning" to={`/administrar/editar/${id}`}>
-            <FaEdit></FaEdit>
-          </Link>
-          <Button variant="danger" onClick={() => {}}>
-            <FaTrash></FaTrash>
-          </Button>
-        </div>
-      </td>
     </tr>
   );
 };

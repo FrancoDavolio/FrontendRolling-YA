@@ -77,7 +77,7 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    color: white;
+    color: white !important;
 }
 
 .icon__name{

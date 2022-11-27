@@ -45,7 +45,6 @@ export const AdminUsuarios = () => {
                 <th>Email</th>
                 <th>Perfil</th>
                 <th>Estado</th>
-                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -71,7 +70,6 @@ export const AdminUsuarios = () => {
                 <th>Email</th>
                 <th>Perfil</th>
                 <th>Estado</th>
-                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>

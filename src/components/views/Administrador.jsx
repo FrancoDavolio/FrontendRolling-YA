@@ -45,6 +45,7 @@ const  mainOption = () => {
       <div className="menu__side" id="menu_side">
         <div className="div__name">
           <NavLink end to={"/"} className="name__page">
+            {/* <img src="../../../public/Logo_fondo_blanco.png" alt="logo" /> */}
             <FaPizzaSlice className="icon__name"></FaPizzaSlice>
             <h4>RollingYA</h4>
           </NavLink>

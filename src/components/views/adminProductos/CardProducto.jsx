@@ -1,8 +1,9 @@
 import { Col, Card, Button } from "react-bootstrap";
+import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { borrarProductoAPI, consultaAPI } from "../../helpers/prodAdmin";
-const CardProducto = ({ producto ,setProductos}) => {
+const CardProducto = ({ producto, setProductos }) => {
   const { id, nombreProducto, precio, imagen, estado, detalle, categoria } = {
     ...producto,
   };
@@ -39,19 +40,25 @@ const CardProducto = ({ producto ,setProductos}) => {
             <Card.Text>Categoria: {categoria}</Card.Text>
             <Card.Text>Precio: ${precio}</Card.Text>
             <hr />
-            <div className="d-flex justify-content-between">
-              <Link className="btn btn-danger" to={`/detalle-producto/${id}`}>
-                Ver mas
-              </Link>
-              <Link
-                className="btn btn-danger"
-                to={`/administrar/productos/editar/${id}`}
-              >
-                Editar
-              </Link>
-              <Button variant="danger" onClick={borrarProducto}>
-                Borrar
-              </Button>
+            <div className="row">
+              <div className="col-6">
+                <Link className="btn btn-danger" to={`/detalle-producto/${id}`}>
+                  Ver mas
+                </Link>
+              </div>
+              <div className="col">
+                <Link
+                  className="btn btn-danger"
+                  to={`/administrar/productos/editar/${id}`}
+                >
+                  <FaEdit></FaEdit>
+                </Link>
+              </div>
+              <div className="col">
+                <Button variant="danger" onClick={borrarProducto}>
+                  <FaTrash></FaTrash>
+                </Button>
+              </div>
             </div>
           </Card.Body>
         </Card>
