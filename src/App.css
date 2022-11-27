@@ -1,10 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
 #root{
+    background-color: #CF0A2C;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+body{
+    background-color:rgb(207,10,44);
+  }
 
 .mainSection{
     flex-grow: 1;
 }
+
+.blanco{
+    background-color: #FFFF;
+}
+.negro{
+    background-color: black;
+}
+.rojo{
+    background-color: #CF0A2C;
+}
+.borde{
+    border: solid black 20px;
+    border-radius: 35px;
+}
+.input{
+    width: 96%;
+    border-radius: 20px;
+}
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Pagina inicio*/
+
+.caruselInicio{
+    width: 100%;
+    object-fit: cover;
+    
+    
+    
+}
+
+.carousel-indicators{
+    display: none;
+} 
+
+.fraseInicio{
+    font-size: 30px;
+    color: white;
+    font-style:italic;
+    font-family: cursive;
+
+}
+
+.imgFrase{
+   width: 100%;
+    border-radius: 15px;
+   
+}
+
+.divFrase{
+    width: 50%;
+}
+
+
+@media all and (max-width:756px){
+    .imgFrase{
+        width: 100%;
+         border-radius: 15px;
+        
+     }
+
+     .divFrase{
+        width: 100%;
+    }
+}
+
 
