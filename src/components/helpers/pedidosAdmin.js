@@ -20,7 +20,7 @@ export const estadoPedidoAPI = async (id,pedido) =>{
             },
             body: JSON.stringify({
                 nombre:pedido.nombre,
-                estado:"realizado"
+                estado:!pedido.estado
             }),
         });
         return respuesta;

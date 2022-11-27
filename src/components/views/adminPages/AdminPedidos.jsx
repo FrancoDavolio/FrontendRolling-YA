@@ -40,7 +40,7 @@ export const AdminPedidos = () => {
         </thead>
         <tbody>
           {pedidos.map((pedido) => {
-            if (pedido.estado === "pendiente") {
+            if (pedido.estado === false) {
               return (<ItemPedido
                 key={pedido.id}
                 pedido={pedido}
@@ -62,7 +62,7 @@ export const AdminPedidos = () => {
         </thead>
         <tbody>
         {pedidos.map((pedido) => {
-                if (pedido.estado === "realizado") {
+                if (pedido.estado === true) {
                   return (
                     <ItemPedido
                     key={pedido.id}
