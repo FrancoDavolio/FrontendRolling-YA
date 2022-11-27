@@ -31,7 +31,10 @@ const Register = ({ setUsuarioLogueado }) => {
               "Bienvenido.",
               "success"
             );
-            localStorage.setItem("tokenRollingYa", JSON.stringify(datos, datos.perfil));
+            localStorage.setItem(
+              "tokenRollingYa",
+              JSON.stringify(datos, datos.perfil)
+            );
             setUsuarioLogueado(datos, datos.perfil);
             navigate("/");
           } else {
