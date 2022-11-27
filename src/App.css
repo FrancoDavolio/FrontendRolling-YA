@@ -1,10 +1,564 @@
+<<<<<<< HEAD
+/*@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "-react-image-gallery/styles/css/image-gallery.css";
+:root, button{
+    font-family: 'Raleway', serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.color{
+    background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+body{
+    background: #191919;
+    background: white;
+    user-select: none;
+    letter-spacing: 3px;
+    color: #b9b9b9;
+}
+
+h1{
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+p{
+    padding-bottom: 15px;
+}
+
+p:last-of-type{
+    padding-bottom: 0;
+}
+
+.try-again{
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.try-again:after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    top: 100%;
+    background: #ebebeb;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.try-again:hover:after{
+    left: 40%;
+    right: 40%;
+}
+
+.wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    font-size: 14px;
+    height: 60px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 0px;
+    box-shadow: 0 0 0 white, 0 0 0 white;
+}
+
+.button-text{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #504bff, #4cfa63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button-circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #504bff, 0 0 20px #504bff, 0 0 30px #504bff;
+    transition: all 0.5s ease;
+}
+
+.button-circle2{
+    top: auto;
+    bottom: 0;
+}
+
+.button-circle3{
+    left: auto;
+    right: 0;
+    box-shadow: 0 0 10px #4cfa63, 0 0 20px #4cfa63, 0 0 30px #4cfa63;
+}
+
+.button-circle4{
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #4cfa63, 0 0 20px #4cfa63, 0 0 30px #4cfa63;
+}
+
+.button:hover{
+    box-shadow: -15px 0 70px -15px #504bff, 15px 0 70px -15px #4cfa63;
+}
+
+.button:hover .button-circle1{
+    transform: translate(-15px, -15px) scale(0);
+}
+
+.button:hover .button-circle2{
+    transform: translate(-15px, 15px) scale(0);
+}
+
+.button:hover .button-circle3{
+    transform: translate(15px, -15px) scale(0);
+}
+
+.button:hover .button-circle4{
+    transform: translate(15px, 15px) scale(0);
+}
+
+.button:hover .button-circle{
+    box-shadow: none;
+}
+
+.popup{
+    opacity: 0;
+    visibility: hidden;
+    height: 400px;
+    width: 400px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease
+}
+
+.popup-inside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 black;
+    transition:
+            box-shadow 0.5s ease 0.7s,
+            border-radius 0.35s ease 0.7s;
+}
+
+.backgrounds{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #504bff, #4cfa63);
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+    border-radius: 50%;
+}
+
+.background2{
+    --offset: 10%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #6665ff, #69fa7f);
+    transform: scale(0);
+    transition: all 0.5s ease 0.1s;
+}
+
+.background3{
+    --offset: 20%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #8583ff, #85fa99);
+    z-index: 2;
+    transition: all 0.5s ease 0.2s;
+}
+
+.background4{
+    --offset: 30%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #aaaaff, #a7fab7);
+    z-index: 3;
+    transition: all 0.5s ease 0.3s;
+}
+
+.background5{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #c9c8ff, #c3fad1);
+    z-index: 4;
+    transition: all 0.5s ease 0.4s;
+}
+
+.background6{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: white;
+    z-index: 5;
+    transition: all 0.8s ease 0.4s;
+}
+
+.content{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.35s ease 0.75s;
+    z-index: 10;
+}
+
+.content-wrapper{
+    text-align: center;
+}
+
+body.active .content{
+    opacity: 1;
+    transform: none;
+}
+
+body.active .popup{
+    opacity: 1;
+    visibility: visible;
+}
+
+body.active .popup-inside{
+    border-radius: 0;
+    box-shadow: -50px 0 200px -50px #504bff, 50px 0 200px -50px #4cfa63;
+}
+
+body.active .background{
+    transform: scale(1);
+}
+
+body.active .background6{
+    transform: scale(8);
+} */
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+$slide-speed: .3s;
+$hover-speed: .15s;
+$explode-speed: .25s;
+
+html {
+	background: #f2f2f2;
+}
+
+body {
+	font-family: "PT Sans";
+	text-align: center;
+	padding-top: 50px;
+	color: darken(#f2f2f2, 65%);
+	
+	span {
+		font-size: .7em;
+		font-style: italic;
+	}
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	margin-top: 20px;
+	font-size: 1.2em;
+	color: darken(#f2f2f2, 25%);
+}
+
+li {
+	list-style: none;
+	font-weight: bold;
+}
+
+.wrapper {
+	position: relative;
+	text-align: center;
+	display: inline-block;
+	width: 550px;
+	height: 300px;
+	padding-top: 30px;
+}
+
+.hamburger {
+	margin: 0 auto;
+	height: 400px;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	text-align: center;
+}
+
+.item {
+	position: relative;
+	transition: $slide-speed;
+}
+
+.link {
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	transform: translateY(-50%);
+	color: inherit;
+	text-decoration: none;
+	font-size: 1.5em;
+	opacity: 0;
+	transition: $slide-speed .1s;
+	z-index: 2;
+}
+
+.shadow {
+	height: 30px;
+	border-radius: 50%;
+	width: 170px;
+	margin: 0 auto;
+	background-image: radial-gradient(rgba(black, .2), rgba(black, 0));
+	transform: translateY(-115px);
+	transition: $slide-speed * 3;
+}
+
+.slide-in {
+	opacity: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: $slide-speed;
+}
+
+.fade {
+	opacity: .2;
+	transition: $slide-speed;
+}
+
+.fade-out {
+	opacity: 0;
+	transition: $slide-speed * 3;
+}
+
+$originals: (
+	bun_top: 95px,
+	tomato: 75px,
+	lettuce: 45px,
+	pickle: 20px,
+	cheese: -10px,
+	bacon: -40px,
+	burger: -75px,
+	bun_bottom: -95px
+);
+
+$offsets: (
+	bun_top: 0,
+	tomato: 0,
+	lettuce: 0,
+	pickle: 0,
+	cheese: 0,
+	bacon: 0,
+	burger: 0,
+	bun_bottom: 0
+);
+
+// original positions
+@each $item, $pos in $originals {
+	.#{$item} {
+		transform: translateY($pos);
+	}
+}
+
+// explode burger!
+@each $item, $offset in $offsets {
+	.item.#{$item}-explode {
+		position: relative;
+		transition: $explode-speed;
+		transform: translateY($offset);	
+	}
+}
+
+// hover transition
+@each $item, $pos in $originals {
+	$val: ($pos / 100) * 90;
+	.#{$item}-hover {
+		transform: translateY($val);
+		position: relative;
+		transition: $hover-speed;
+	}	
+}
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
 #root{
+    background-color: #CF0A2C;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+body{
+    background-color:rgb(207,10,44);
+  }
 
 .mainSection{
     flex-grow: 1;
 }
 
+.blanco{
+    background-color: #FFFF;
+}
+.negro{
+    background-color: black;
+}
+.rojo{
+    background-color: #CF0A2C;
+}
+.borde{
+    border: solid black 20px;
+    border-radius: 35px;
+}
+.input{
+    width: 96%;
+    border-radius: 20px;
+}
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Pagina inicio*/
+
+.caruselInicio{
+    width: 100%;
+    object-fit: cover;
+    
+    
+    
+}
+
+.carousel-indicators{
+    display: none;
+} 
+
+.fraseInicio{
+    font-size: 30px;
+    color: white;
+    font-style:italic;
+    font-family: cursive;
+
+}
+
+.imgFrase{
+   width: 100%;
+    border-radius: 15px;
+   
+}
+
+.divFrase{
+    width: 50%;
+}
+
+
+@media all and (max-width:756px){
+    .imgFrase{
+        width: 100%;
+         border-radius: 15px;
+        
+     }
+
+     .divFrase{
+        width: 100%;
+    }
+}
+
+
+>>>>>>> 8b17b63fe42fb3d174471a423783134d3e970379
+/*LEAHS CSS* <div style={{ display:'flex', justifyContent: 'center'}}  incorrect style tag>*/
+.description {
+    display:'flex';
+    text align: center
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
