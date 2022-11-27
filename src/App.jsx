@@ -5,28 +5,26 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Login from "./components/views/usuario/Login";
 import Inicio from "./components/views/Inicio";
-import Detalle from "./components/views/Detalle";
-import Error404 from "./components/views/Error404";
-import RutasProtegidas from "./components/routes/RutasProtegidas";
-import RutasAdmin from "./components/routes/RutasAdmin";
 import Register from "./components/views/usuario/Register";
-import Pedidos from "./components/views/Pedidos"
 import { useState } from "react";
+import Administrador from "./components/views/Administrador";
+import { EditarProducto } from "./components/views/adminProductos/EditarProducto";
+import { CrearProducto } from "./components/views/adminProductos/CrearProducto";
 import SeparadorSuperior from "./components/common/SeparadorSuperior";
 import SeparadorInferior from "./components/common/SeparadorInferior";
 import AcercaDe from "./components/views/AcercaDe"
 
+
 function App() {
-  const usuario = JSON.parse(localStorage.getItem("tokenRollingYa")) || {};
+  const usuario = JSON.parse(localStorage.getItem("tokenCafeBenito")) || {};
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
 
   return (
-    
     <BrowserRouter>
-      <Menu
+      {/* <Menu
         usuarioLogueado={usuarioLogueado}
         setUsuarioLogueado={setUsuarioLogueado}
-      ></Menu>
+      ></Menu> */}
       <SeparadorSuperior></SeparadorSuperior>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -38,25 +36,52 @@ function App() {
           path="/login"
           element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
         ></Route>
+        {/*Rutas protegidas*/}
         <Route
           exact
-          path="/register"
+          path="/administrar"
           element={
-            <Register setUsuarioLogueado={setUsuarioLogueado}></Register>
+            <Administrador option={"admin"}></Administrador>
           }
         ></Route>
         <Route
-          path="/adiministrador/*"
-          element={
-            <RutasProtegidas>
-              <RutasAdmin setUsuarioLogueado={setUsuarioLogueado}></RutasAdmin>
-            </RutasProtegidas>
-          }
+        exact
+        path="/administrar/usuarios"
+        element={
+          <Administrador option={"usuarios"}></Administrador>
+        }
         ></Route>
-        <Route exact path="*" element={<Error404></Error404>}></Route>
+        <Route
+        exact
+        path="/administrar/productos"
+        element={
+          <Administrador option={"productos"}></Administrador>
+        }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/pedidos"
+        element={
+          <Administrador option={"pedidos"}></Administrador>
+        }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/productos/editar/:id"
+        element={
+          <EditarProducto></EditarProducto>
+        }
+        ></Route>
+        <Route
+        exact
+        path="/administrar/productos/crear"
+        element={
+          <CrearProducto></CrearProducto>
+        }
+        ></Route>
       </Routes>
       <SeparadorInferior></SeparadorInferior>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </BrowserRouter>
   );
 }

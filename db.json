@@ -1,4 +1,60 @@
 {
+  "productos": [
+    {
+      "nombreProducto": "café",
+      "precio": "3",
+      "detalle": "esto es un producto",
+      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "estado": "si",
+      "categoria": "bebida-caliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "brownie",
+      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "precio": 250,
+      "categoria": "dulce",
+      "detalle": "esto es un producto",
+      "estado": "si",
+      "id": 2
+    },
+    {
+      "nombreProducto": "café rico",
+      "precio": 400,
+      "detalle": "esto es un producto",
+      "imagen": "https://images.pexels.com/photos/11942622/pexels-photo-11942622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "estado": "si",
+      "categoria": "bebida-caliente",
+      "id": 4
+    },
+    {
+      "nombreProducto": "té de manzanilla",
+      "precio": "60",
+      "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "categoria": "bebida-caliente",
+      "detalle": "esto es un producto",
+      "estado": "si",
+      "id": 6
+    },
+    {
+      "nombreProducto": "facturas x1",
+      "precio": "65",
+      "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "categoria": "dulce",
+      "detalle": "esto es un producto",
+      "estado": "si",
+      "id": 8
+    },
+    {
+      "nombreProducto": "Medialuna",
+      "precio": "777",
+      "detalle": "esto es un producto",
+      "imagen": "https://media.ldlc.com/r1600/ld/products/00/05/93/02/LD0005930210_1.jpg",
+      "estado": "no",
+      "categoria": "bebida-caliente",
+      "id": 9
+    }
+  ],
   "usuarios": [
     {
       "nombre": "Franco",
@@ -23,6 +79,18 @@
       "perfil": "cliente",
       "estado": "confirmado",
       "id": 3
+    }
+  ],
+  "pedidos": [
+    {
+      "nombre": "Pedido 1",
+      "estado": "pendiente",
+      "id": 1
+    },
+    {
+      "nombre": "Pedido 2",
+      "estado": "realizado",
+      "id": 2
     }
   ]
 }
