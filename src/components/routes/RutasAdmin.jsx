@@ -18,14 +18,14 @@ const RutasAdmin = ({ setUsuarioLogueado }) => {
         <Routes>
           <Route
             exact
-            path="/crearproducto"
+            path="administrador/crearproducto"
             element={<CrearProducto></CrearProducto>}
           ></Route>
         </Routes>
         <Routes>
           <Route
             exact
-            path="/editar/:id"
+            path="administrador/editar/:id"
             element={<EditarProducto></EditarProducto>}
           ></Route>
         </Routes>
