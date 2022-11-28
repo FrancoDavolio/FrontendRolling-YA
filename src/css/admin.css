@@ -223,12 +223,12 @@ header{
     padding-left:2%;  
   }
   
-  /* Background-color of the odd rows */
+  /* Background-color de filas impares*/
   .containerTable tr:nth-child(odd) {
         background-color: #323C50;
   }
   
-  /* Background-color of the even rows */
+  /* Background-color de filas pares */
   .containerTable tr:nth-child(even) {
         background-color: #2C3446;
   }
