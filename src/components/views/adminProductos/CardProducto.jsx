@@ -30,7 +30,7 @@ const CardProducto = ({ producto, setProductos }) => {
   };
   return (
     <>
-      <Col className="my-3">
+      {/* <Col className="my-3">
         <Card className="anchoCardProducto">
           <Card.Img variant="top" src={imagen} />
           <Card.Body>
@@ -62,6 +62,48 @@ const CardProducto = ({ producto, setProductos }) => {
             </div>
           </Card.Body>
         </Card>
+      </Col> */}
+      <Col className="">
+        <div className="cardProducto col">
+          <div className="face face1">
+            <div className="content">
+              <img src={imagen} />
+              <h3>{nombreProducto}</h3>
+            </div>
+          </div>
+          <div className="face face2">
+            <div className="content">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">{estado}</li>
+                <li class="list-group-item">{detalle}</li>
+                <li class="list-group-item">{categoria}</li>
+                <li class="list-group-item">${precio}</li>
+              </ul>
+
+              <div className="row">
+              <div className="col-6">
+                <Link className="etiqueta" to={`/detalle-producto/${id}`}>
+                  Ver mas
+                </Link>
+              </div>
+              <div className="col-3">
+                <Link
+                  className="etiqueta"
+                  to={`/administrar/productos/editar/${id}`}
+                >
+                  <FaEdit></FaEdit>
+                </Link>
+              </div>
+              <div className="col-3">
+                
+                <Button className="etiqueta" onClick={borrarProducto}>
+                  <FaTrash></FaTrash>
+                </Button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
       </Col>
     </>
   );
