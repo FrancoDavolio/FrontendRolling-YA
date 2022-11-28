@@ -40,12 +40,15 @@ const  mainOption = () => {
             onClick={open_close_menu}
           ></FaBars>
         </div>
+        {/* <div className="logo">
+          <img src="https://trello.com/1/cards/636c0af2f51b67035ab6095e/attachments/6376cb68f3a30e01daa9019f/previews/6376cb68f3a30e01daa9021e/download/Logo_fondo_blanco.png" alt="logo" className="w-100"/>
+        </div> */}
       </header>
 
       <div className="menu__side" id="menu_side">
         <div className="div__name">
           <NavLink end to={"/"} className="name__page">
-            {/* <img src="../../../public/Logo_fondo_blanco.png" alt="logo" /> */}
+            {/* <img src="https://trello.com/1/cards/636c0af2f51b67035ab6095e/attachments/6376cb68f3a30e01daa9019f/previews/6376cb68f3a30e01daa9021e/download/Logo_fondo_blanco.png" alt="logo" className="icon__name"/> */}
             <FaPizzaSlice className="icon__name"></FaPizzaSlice>
             <h4>RollingYA</h4>
           </NavLink>

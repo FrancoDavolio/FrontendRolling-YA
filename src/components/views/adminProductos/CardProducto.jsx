@@ -67,7 +67,7 @@ const CardProducto = ({ producto, setProductos }) => {
         <div className="cardProducto col">
           <div className="face face1">
             <div className="content">
-              <img src={imagen} />
+              <div className="text-center"><img src={imagen} className="text-center"/></div>
               <h3>{nombreProducto}</h3>
             </div>
           </div>

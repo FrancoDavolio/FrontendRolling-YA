@@ -376,3 +376,9 @@ header{
     background: #fff3cd;
     color:rgb(122, 127, 131)
 }
+
+.logo{
+    width: 50px;
+    margin-left: auto;
+    margin-right: 30px;
+}
