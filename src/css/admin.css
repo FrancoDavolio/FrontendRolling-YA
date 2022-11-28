@@ -349,3 +349,13 @@ header{
     background: #333;
     color: #fff;
 }
+
+.text-bg-confirmado{
+    background: #d1e7dd;
+    color:rgb(122, 127, 131)
+}
+
+.text-bg-pendiente{
+    background: #fff3cd;
+    color:rgb(122, 127, 131)
+}

@@ -11,7 +11,15 @@ export const ItemUsuario = ({ usuario }) => {
       <td>{nombre}</td>
       <td>{email}</td>
       <td>{perfil}</td>
-      <td>{estado}</td>
+      <td>
+        {estado ? (
+          <>
+            <span class="badge rounded-pill text-bg-confirmado">Confirmado</span>
+          </>
+        ) : (
+          <span class="badge rounded-pill text-bg-pendiente">Pendiente</span>
+        )}
+      </td>
     </tr>
   );
 };

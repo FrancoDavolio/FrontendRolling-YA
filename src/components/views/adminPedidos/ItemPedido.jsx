@@ -21,7 +21,13 @@ export const ItemPedido = ({ pedido, setPedidos }) => {
     <tr>
       <td>{id}</td>
       <td>{nombre}</td>
-      <td>{estado ? "Realizado" : "Pendiente"}</td>
+      <td>{estado ? (
+          <>
+            <span class="badge rounded-pill text-bg-confirmado">Realizado</span>
+          </>
+        ) : (
+          <span class="badge rounded-pill text-bg-pendiente">Pendiente</span>
+        )}</td>
       {estado ? (
         <></>
       ) : (
