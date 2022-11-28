@@ -25,11 +25,11 @@ function App() {
         usuarioLogueado={usuarioLogueado}
         setUsuarioLogueado={setUsuarioLogueado}
       ></Menu> */}
-      <SeparadorSuperior></SeparadorSuperior>
+      {/* <SeparadorSuperior></SeparadorSuperior> */}
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
-        <Route exact path="/pedidos" element={<Pedidos></Pedidos>}></Route>
+        {/* <Route exact path="/detalle/:id" element={<Detalle></Detalle>}></Route>
+        <Route exact path="/pedidos" element={<Pedidos></Pedidos>}></Route> */}
         <Route exact path="/nosotros" element={<AcercaDe></AcercaDe>}></Route>
         <Route
           exact
@@ -80,7 +80,7 @@ function App() {
         }
         ></Route>
       </Routes>
-      <SeparadorInferior></SeparadorInferior>
+      {/* <SeparadorInferior></SeparadorInferior> */}
       {/* <Footer></Footer> */}
     </BrowserRouter>
   );

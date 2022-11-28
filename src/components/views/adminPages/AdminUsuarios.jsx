@@ -37,14 +37,15 @@ export const AdminUsuarios = () => {
       <hr />
       <Row>
         <Col lg={6}>
-          <Table responsive bordered>
+          <h2>Clientes</h2>
+          <Table className="containerTable" responsive>
             <thead>
               <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Perfil</th>
-                <th>Estado</th>
+                <th><h1>Id</h1> </th>
+                <th><h1>Nombre</h1> </th>
+                <th><h1>Email</h1> </th>
+                <th><h1>Perfil</h1> </th>
+                <th><h1>Estado</h1> </th>
               </tr>
             </thead>
             <tbody>
@@ -62,14 +63,15 @@ export const AdminUsuarios = () => {
           </Table>
         </Col>
         <Col lg={6}>
-          <Table responsive bordered>
+          <h2>Administradores</h2>
+          <Table className="containerTable"  responsive>
             <thead>
               <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Perfil</th>
-                <th>Estado</th>
+                <th><h1>Id</h1> </th>
+                <th><h1>Nombre</h1> </th>
+                <th><h1>Email</h1> </th>
+                <th><h1>Perfil</h1> </th>
+                <th><h1>Estado</h1> </th>
               </tr>
             </thead>
             <tbody>
