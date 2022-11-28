@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import CardProductosInicio from "./pagInicio/cardProductosInicio";
 import { consultaAPI } from "../helpers/prodAdmin";
 import { Form } from "react-bootstrap";
-import buscar from "../helpers/queries"
+
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
   
