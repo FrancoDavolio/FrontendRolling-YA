@@ -5,7 +5,7 @@ const Detalle = () => {
     <Container>
       <section>
         <h1 className="text-center">Hamburguesa Doble Queso</h1>
-        <p> className="<fs-3>
+        <p> className="
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error doloremque beatae possimus deleniti voluptates quasi neque non, asperiores enim adipisci maiores autem alias quas ex! Porro illum possimus expedita nesciunt.
         </p>
       </section>
@@ -21,6 +21,7 @@ const Detalle = () => {
   className="w-100"
   />
 </Card>
+
 </div>
 <div className="col-6">
   <h2 className="my-4">Precio: $1000</h2>
