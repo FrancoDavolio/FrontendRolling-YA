@@ -11,6 +11,7 @@ const CardProductosInicio = ({ producto }) => {
 
           <Link>
             <img src={imagen} className="imgTarjetas"/>
+            <Card.Title>{nombreProducto}</Card.Title>
           </Link>
         </div>
         

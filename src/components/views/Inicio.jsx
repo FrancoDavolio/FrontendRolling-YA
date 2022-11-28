@@ -5,17 +5,11 @@ import { Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import CardProductosInicio from "./pagInicio/cardProductosInicio";
 import { consultaAPI } from "../helpers/prodAdmin";
+import { Form } from "react-bootstrap";
+import buscar from "../helpers/queries"
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
-
-  useEffect(()=>{
-  consultaAPI().then((respuesta)=>{
-   
-   setProductos(respuesta);
-   })
-
-  },[])
-
+  
   return (
     <>
       <Carousel fade>
@@ -28,6 +22,11 @@ const Inicio = () => {
           />
           <Carousel.Caption>
             <h2 className="tituloCarusel  ">¡PEDÍ LO QUE QUIERAS!</h2>
+            <Form className="d-flex" role="search">
+              <Form.Control className="form-control ms-2" type="search" placeholder="Buscar" aria-label="Buscar" id="inputBuscar" onkeyup="buscar()"/>
+            
+            </Form>
+           
             <p className="fw-bold">ROLLING-YA</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -66,7 +65,9 @@ const Inicio = () => {
         <div className="text-center">
           <h1 className="text-light  fw-bold ">PRODUCTOS ROLLING-YA</h1>
         </div>
+<section id="mysection">
 
+<article>
 
         <Row xs={1} md={2} lg={4} >
           {productos.map((producto) => (
@@ -78,6 +79,8 @@ const Inicio = () => {
             ></CardProductosInicio>
           ))}
         </Row>
+</article>
+</section>
 
         <hr />
         
