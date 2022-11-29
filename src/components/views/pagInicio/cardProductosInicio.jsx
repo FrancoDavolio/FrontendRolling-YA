@@ -9,9 +9,10 @@ const CardProductosInicio = ({ producto }) => {
       <Col className="d-flex justify-content-center">
         <div className="tarjetas">
 
-          <Link>
+          <Link className="tituloscard ">
             <img src={imagen} className="imgTarjetas"/>
-            <Card.Title>{nombreProducto}</Card.Title>
+
+            <Card.Title className="p-3">{nombreProducto}</Card.Title>
           </Link>
         </div>
         
