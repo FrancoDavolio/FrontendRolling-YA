@@ -53,6 +53,15 @@
       "estado": "si",
       "categoria": "salado",
       "id": 9
+    },
+    {
+      "nombreProducto": "Tacos",
+      "precio": "400",
+      "detalle": "esto es un producto",
+      "imagen": "https://media.istockphoto.com/id/614313140/es/foto/tacos-de-ternera-suave-con-papas-fritas.jpg?s=612x612&w=0&k=20&c=QHiqUDuVqyDokMkE4htKJVRQES_UPq_NGMVP9361TnU=",
+      "estado": "si",
+      "categoria": "salado",
+      "id": 10
     }
   ],
   "usuarios": [

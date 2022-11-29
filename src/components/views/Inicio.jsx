@@ -1,15 +1,54 @@
 import React from "react";
 
 import Carousel from "react-bootstrap/Carousel";
-import { Container, Row } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import CardProductosInicio from "./pagInicio/cardProductosInicio";
 import { consultaAPI } from "../helpers/prodAdmin";
 import { Form } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import axios from "axios";
 
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
-  
+  const [obtenerProductos, setObtenerProductos]= useState([]);
+  const [busqueda, setbusqueda] = useState ("")
+ useEffect(()=>{
+    consultaAPI().then((respuesta)=>{
+      //console.log(respuesta)
+     setProductos(respuesta);
+    })
+    
+ },[])
+/*controlar*/
+ const peticionGet=async()=>{
+   await axios.get ("http://localhost:3004/productos")
+   .then(respuesta=>{
+       setObtenerProductos(respuesta.data);
+       obtenerProductos(respuesta.data);
+   }).catch(error=>{
+       console.log(error);
+   })
+ }
+ useEffect(()=>{
+   peticionGet();
+ },[])
+const handleChange=e=>{
+  setbusqueda(e.target.value);
+  filtrar(e.target.value);
+}
+
+const filtrar=(terminoBusqueda)=>{
+  var resultadoBusqueda=obtenerProductos.filter((elemento)=>{
+   if(elemento.nombreProducto.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+   ){ return elemento;
+    }
+ });
+  setProductos(resultadoBusqueda);
+  console.log(setProductos)
+}
+
+
   return (
     <>
       <Carousel fade>
@@ -22,10 +61,7 @@ const Inicio = () => {
           />
           <Carousel.Caption>
             <h2 className="tituloCarusel  ">¡PEDÍ LO QUE QUIERAS!</h2>
-            <Form className="d-flex" role="search">
-              <Form.Control className="form-control ms-2" type="search" placeholder="Buscar" aria-label="Buscar" id="inputBuscar" onkeyup="buscar()"/>
-            
-            </Form>
+           
            
             <p className="fw-bold">ROLLING-YA</p>
           </Carousel.Caption>
@@ -58,7 +94,15 @@ const Inicio = () => {
         </Carousel.Item>
       </Carousel>
 
-      <br />
+      <div className="container buscador d-flex">
+
+            <input className="form-control inputBuscar"
+            value={busqueda}
+            placeholder="buqueda de producto" 
+            onChange={handleChange}
+            />
+            <Button className="btn btn-success ms-2">buscar</Button>
+           </div>
       <hr />
 
       <Container>
