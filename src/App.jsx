@@ -36,6 +36,11 @@ function App() {
           path="/login"
           element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
         ></Route>
+        <Route
+          exact
+          path="/registro"
+          element={<Register setUsuarioLogueado={setUsuarioLogueado}></Register>}
+        ></Route>
         {/*Rutas protegidas*/}
         <Route
           exact

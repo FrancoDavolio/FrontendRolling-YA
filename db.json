@@ -77,7 +77,7 @@
       "nombre": "Majo",
       "email": "majoaguero@hotmail.com",
       "contrasena": "@Holamundo123",
-      "perfil": "cliente",
+      "perfil": "admin",
       "estado": "confirmado",
       "id": 2
     },
@@ -88,6 +88,30 @@
       "perfil": "cliente",
       "estado": "confirmado",
       "id": 3
+    },
+    {
+      "nombre": "leonel",
+      "email": "leonelmessi@hotmail.com",
+      "contrasena": "Leomessi1234@",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 4
+    },
+    {
+      "nombre": "pedro",
+      "email": "pedro@gmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "admin",
+      "estado": "confirmado",
+      "id": 5
+    },
+    {
+      "nombre": "juan",
+      "email": "juan10@hotmail.com",
+      "contrasena": "Juan2022@",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 6
     }
   ],
   "pedidos": [

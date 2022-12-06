@@ -28,11 +28,15 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
           {usuarioLogueado.email ? (
             usuarioLogueado.perfil === "admin" ? (
               <>
+              
+
+            
                 <Button onClick={logout} variant="">
                   Cerrar sesión
                 </Button>
+             
                 <NavLink
-                  to="/administrador"
+                  to="/administrar"
                   className="nav-item nav-link ms-3 "
                 >
                   Administrar
@@ -40,15 +44,15 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </>
             ) : (
               <>
+            
+
                 <Button onClick={logout} variant="">
                   Cerrar sesión
                 </Button>
-                <NavLink
-                  to="/administrar"
-                  className="nav-item nav-link ms-3 "
-                >
-                  Administrar
-                </NavLink>
+              
+                <NavLink to="/" className="nav-item nav-link ms-3 ">
+                Inicio
+              </NavLink>
               </>
             )
           ) : (

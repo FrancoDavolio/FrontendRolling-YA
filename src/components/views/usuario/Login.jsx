@@ -99,7 +99,7 @@ const Login = ({ setUsuarioLogueado }) => {
       <div className="text-center my-5">
         <Button
           className="ms-3 text-light negro"
-          onClick={() => navigate("/register")}
+          onClick={() => navigate("/registro")}
           variant="dark"
         >
           ¿No estas registrado? Registrate aqui.

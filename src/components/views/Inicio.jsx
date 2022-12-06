@@ -98,7 +98,7 @@ const filtrar=(terminoBusqueda)=>{
 
             <input className="form-control inputBuscar"
             value={busqueda}
-            placeholder="buqueda de producto" 
+            placeholder="Buscar Producto" 
             onChange={handleChange}
             />
             <Button className="btn btn-success ms-2">buscar</Button>
