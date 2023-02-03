@@ -2,7 +2,7 @@ import { Container, Form, Button, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { consultarUserAPi } from "../../helpers/queriesLogin";
+import { login } from "../../helpers/queriesLogin";
 
 const Login = ({ setUsuarioLogueado }) => {
   const navigate = useNavigate();
@@ -13,32 +13,23 @@ const Login = ({ setUsuarioLogueado }) => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    consultarUserAPi(datos).then((respuesta) => {
-      const encontrarUsuario = respuesta.find(
-        (user) => user.email === datos.email
-      );
-      datos.perfil = encontrarUsuario.perfil;
-      if (encontrarUsuario) {
-        if (encontrarUsuario.contrasena === datos.contrasena) {
-          Swal.fire(
-            "Bienvenido",
-            `Gracias por contar con nosotros, ${encontrarUsuario.nombre}`,
-            "success"
-          );
-          localStorage.setItem("tokenRollingYa", JSON.stringify(datos, datos.perfil));
-          setUsuarioLogueado(datos, datos.perfil);
-          navigate("/");
-        } else {
-          Swal.fire(
-            "Error",
-            `Contraseña incorrecta, vuelva a intentarlo`,
-            "error"
-          );
-        }
+    login(datos).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire(
+          "Bienvenido",
+          `Gracias por contar con nosotros, ${respuesta.nombre}`,
+          "success"
+        );
+        localStorage.setItem(
+          "tokenRollingYa",
+          JSON.stringify(respuesta)
+        );
+        setUsuarioLogueado(respuesta);
+        navigate("/");
       } else {
         Swal.fire(
-          "Email incorrecto",
-          `No encontramos un email con ese nombre, vuelve a intentarlo`,
+          `Hubo un error inesperado`,
+          "Intentelo nuevamente en breve.",
           "error"
         );
       }
@@ -50,13 +41,10 @@ const Login = ({ setUsuarioLogueado }) => {
       <h1 className="text-center my-3 display-2 poppins text-light">
         Bienvenido a RollingYa!
       </h1>
-      <section className="d-flex justify-content-center">
-        <Card
-          style={{ width: "30rem", height: "24rem" }}
-          className="borde rojo"
-        >
+      <section className="d-flex justify-content-center text-light">
+        <Card style={{ width: "30rem", height: "auto" }} className="borde rojo">
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <Form.Group className="mb-4">
+            <Form.Group>
               <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins">
                 Correo electrónico
               </Form.Label>
@@ -72,7 +60,7 @@ const Login = ({ setUsuarioLogueado }) => {
               </div>
               <Form className="text-danger">{errors.email?.message}</Form>
             </Form.Group>
-            <Form.Group className="mb-4">
+            <Form.Group>
               <Form.Label className="mb-4 mt-1 ms-4 fs-3 poppins">
                 Contraseña
               </Form.Label>
@@ -89,7 +77,11 @@ const Login = ({ setUsuarioLogueado }) => {
               <Form className="text-danger">{errors.contrasena?.message}</Form>
             </Form.Group>
             <div className="text-center">
-              <Button className="text-light negro" type="submit" variant="dark">
+              <Button
+                className="text-light negro mt-4"
+                type="submit"
+                variant="dark"
+              >
                 Iniciar Sesión
               </Button>
             </div>
