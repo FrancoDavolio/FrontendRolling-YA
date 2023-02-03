@@ -46,13 +46,22 @@
       "id": 8
     },
     {
-      "nombreProducto": "Medialuna",
-      "precio": "777",
+      "nombreProducto": "Papas Gratinadas",
+      "precio": "700",
       "detalle": "esto es un producto",
-      "imagen": "https://media.ldlc.com/r1600/ld/products/00/05/93/02/LD0005930210_1.jpg",
-      "estado": "no",
-      "categoria": "bebida-caliente",
+      "imagen": "https://images.pexels.com/photos/14369181/pexels-photo-14369181.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "estado": "si",
+      "categoria": "salado",
       "id": 9
+    },
+    {
+      "nombreProducto": "Tacos",
+      "precio": "400",
+      "detalle": "esto es un producto",
+      "imagen": "https://media.istockphoto.com/id/614313140/es/foto/tacos-de-ternera-suave-con-papas-fritas.jpg?s=612x612&w=0&k=20&c=QHiqUDuVqyDokMkE4htKJVRQES_UPq_NGMVP9361TnU=",
+      "estado": "si",
+      "categoria": "salado",
+      "id": 10
     }
   ],
   "usuarios": [
@@ -68,7 +77,7 @@
       "nombre": "Majo",
       "email": "majoaguero@hotmail.com",
       "contrasena": "@Holamundo123",
-      "perfil": "cliente",
+      "perfil": "admin",
       "estado": "confirmado",
       "id": 2
     },
@@ -79,6 +88,30 @@
       "perfil": "cliente",
       "estado": "confirmado",
       "id": 3
+    },
+    {
+      "nombre": "leonel",
+      "email": "leonelmessi@hotmail.com",
+      "contrasena": "Leomessi1234@",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 4
+    },
+    {
+      "nombre": "pedro",
+      "email": "pedro@gmail.com",
+      "contrasena": "@Holamundo123",
+      "perfil": "admin",
+      "estado": "confirmado",
+      "id": 5
+    },
+    {
+      "nombre": "juan",
+      "email": "juan10@hotmail.com",
+      "contrasena": "Juan2022@",
+      "perfil": "cliente",
+      "estado": "confirmado",
+      "id": 6
     }
   ],
   "pedidos": [

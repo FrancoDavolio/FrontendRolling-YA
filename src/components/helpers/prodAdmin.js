@@ -14,7 +14,7 @@ export const consultaAPI = async () => {
 
 export const obtenerProducto = async (id) => { 
     try {
-      const respuesta = await fetch(`http://localhost:3004/productos/${id}`);
+    const respuesta = await fetch(`http://localhost:3004/productos/${id}`);
       const productoEncontrado = {
         dato: await respuesta.json(),
         status:  respuesta.status
@@ -24,7 +24,7 @@ export const obtenerProducto = async (id) => {
       console.log(error);
       return false;
     }
- }
+ };
 
  export const editarProductoAPI = async (id, producto) => {
   try {

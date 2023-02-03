@@ -15,7 +15,6 @@ const Register = ({ setUsuarioLogueado }) => {
   const onSubmit = (datos) => {
     datos.perfil = "cliente";
     datos.estado = "confirmado";
-    // if (arrayEmail.includes(datos.email) === false) {
       crearUsuarioAPI(datos).then((respuesta) => {
         if (respuesta.status === 201) {
           Swal.fire(

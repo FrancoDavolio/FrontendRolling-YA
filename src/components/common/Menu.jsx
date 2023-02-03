@@ -2,6 +2,9 @@ import { Nav, Navbar, NavDropdown, NavItem } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { GiShoppingCart } from "react-icons/gi";
+import logonav from "../../Assets/Logo_fondo_blanco.png";
+
+
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const logo = (
@@ -25,11 +28,15 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
           {usuarioLogueado.token? (
             usuarioLogueado.perfil === "admin" ? (
               <>
+              
+
+            
                 <Button onClick={logout} variant="">
                   Cerrar sesión
                 </Button>
+             
                 <NavLink
-                  to="/administrador"
+                  to="/administrar"
                   className="nav-item nav-link ms-3 "
                 >
                   Administrar
@@ -37,12 +44,15 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </>
             ) : (
               <>
+            
+
                 <Button onClick={logout} variant="">
                   Cerrar sesión
                 </Button>
+              
                 <NavLink to="/" className="nav-item nav-link ms-3 ">
-                  Inicio
-                </NavLink>
+                Inicio
+              </NavLink>
               </>
             )
           ) : (
@@ -57,7 +67,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
           )}
           <Link to="/" className="ms-3">
             <img
-              src="./Logo_fondo_blanco.png"
+              src={logonav}
               alt="logo de rolling ya"
               width="60px"
             />
