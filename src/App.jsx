@@ -13,18 +13,20 @@ import { CrearProducto } from "./components/views/adminProductos/CrearProducto";
 import SeparadorSuperior from "./components/common/SeparadorSuperior";
 import SeparadorInferior from "./components/common/SeparadorInferior";
 import AcercaDe from "./components/views/AcercaDe"
+import Detalle from "./components/views/Detalle"
+import Pedidos from "./components/views/Pedidos"
 
 
 function App() {
-  const usuario = JSON.parse(localStorage.getItem("tokenCafeBenito")) || {};
+  const usuario = JSON.parse(localStorage.getItem("tokenRollingYa")) || {};
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
 
   return (
     <BrowserRouter>
-          <Menu
+      <Menu
         usuarioLogueado={usuarioLogueado}
         setUsuarioLogueado={setUsuarioLogueado}
-      ></Menu> 
+      ></Menu>
       <SeparadorSuperior></SeparadorSuperior>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -38,7 +40,7 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/registro"
+          path="/register"
           element={<Register setUsuarioLogueado={setUsuarioLogueado}></Register>}
         ></Route>
         {/*Rutas protegidas*/}
@@ -86,7 +88,7 @@ function App() {
         ></Route>
       </Routes>
       <SeparadorInferior></SeparadorInferior>
-      <Footer></Footer> 
+      <Footer></Footer>
     </BrowserRouter>
   );
 }

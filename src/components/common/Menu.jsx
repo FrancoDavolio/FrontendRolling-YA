@@ -25,7 +25,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="py-1 justify-content-between w-100">
-          {usuarioLogueado.email ? (
+          {usuarioLogueado.token? (
             usuarioLogueado.perfil === "admin" ? (
               <>
               

@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { consultarUserAPi, crearUsuarioAPI } from "../../helpers/queriesLogin";
+import { crearUsuarioAPI } from "../../helpers/queriesLogin";
 
 const Register = ({ setUsuarioLogueado }) => {
   const navigate = useNavigate();
@@ -14,51 +13,29 @@ const Register = ({ setUsuarioLogueado }) => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    let i = 0;
-    consultarUserAPi(datos).then((respuesta) => {
-      let arrayEmail = [];
-      respuesta.map((usuario) => {
-        arrayEmail[i] = usuario.email;
-        i++;
+    datos.perfil = "cliente";
+    datos.estado = "confirmado";
+      crearUsuarioAPI(datos).then((respuesta) => {
+        if (respuesta.status === 201) {
+          Swal.fire(
+            `Te registraste correctamente, ${respuesta.nombre}`,
+            "Bienvenido.",
+            "success"
+          );
+          localStorage.setItem(
+            "tokenRollingYa",
+            JSON.stringify(respuesta)
+          );
+          setUsuarioLogueado(respuesta);
+          navigate("/");
+        } else {
+          Swal.fire(
+            `Hubo un error inesperado`,
+            "Intentelo nuevamente en breve.",
+            "error"
+          );
+        }
       });
-
-      if(datos.contrasena === "@Holamundo123"){
-        datos.perfil = "admin"
-      }else{
-        datos.perfil = "cliente";
-
-      }
-      datos.estado = "confirmado";
-      if (arrayEmail.includes(datos.email) === false) {
-        crearUsuarioAPI(datos).then((respuesta) => {
-          if (respuesta.status === 201) {
-            Swal.fire(
-              `Te registraste correctamente, ${datos.nombre}`,
-              "Bienvenido.",
-              "success"
-            );
-            localStorage.setItem(
-              "tokenRollingYa",
-              JSON.stringify(datos, datos.perfil)
-            );
-            setUsuarioLogueado(datos, datos.perfil);
-            navigate("/");
-          } else {
-            Swal.fire(
-              `Hubo un error inesperado`,
-              "Intentelo nuevamente en breve.",
-              "error"
-            );
-          }
-        });
-      } else {
-        Swal.fire(
-          `Este email ya esta registrado`,
-          "Intente con otro email.",
-          "error"
-        );
-      }
-    });
   };
 
   return (
@@ -67,13 +44,10 @@ const Register = ({ setUsuarioLogueado }) => {
         Registrate en RollingYa
       </h1>
       <section className="d-flex justify-content-center">
-        <Card
-          style={{ width: "30rem", height: "33rem" }}
-          className="borde rojo"
-        >
+        <Card style={{ width: "30rem", height: "auto" }} className="borde rojo">
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <Form.Group className="mb-3">
-              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins">
+            <Form.Group>
+              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins  text-light">
                 Nombre
               </Form.Label>
               <div className="d-flex justify-content-center">
@@ -102,8 +76,8 @@ const Register = ({ setUsuarioLogueado }) => {
               <Form className="text-danger">{errors.nombre?.message}</Form>
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins">
+            <Form.Group>
+              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins text-light">
                 Correo Electrónico
               </Form.Label>
               <div className="d-flex justify-content-center">
@@ -133,15 +107,15 @@ const Register = ({ setUsuarioLogueado }) => {
               <Form className="text-danger">{errors.email?.message}</Form>
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins">
+            <Form.Group>
+              <Form.Label className="mb-4 mt-4 ms-4 fs-3 poppins text-light">
                 Contraseña
               </Form.Label>
               <div className="d-flex justify-content-center">
                 <Form.Control
-                  className="input"
+                  className="input text-ligh"
                   type="password"
-                  placeholder="Ej: holamundo123"
+                  placeholder="Ej: @Holamundo123"
                   {...register("contrasena", {
                     required: "La contrasena es obligatorio",
                     minLength: {
@@ -149,9 +123,9 @@ const Register = ({ setUsuarioLogueado }) => {
                       message: "Su contraseña debe tener al menos 8 caracteres",
                     },
                     maxLength: {
-                      value: 30,
+                      value: 15,
                       message:
-                        "Su contraseña debe tener como 15 caracteres como maximo",
+                        "Su contraseña debe tener 15 caracteres como maximo",
                     },
                     pattern: {
                       value:
@@ -164,12 +138,8 @@ const Register = ({ setUsuarioLogueado }) => {
               </div>
               <Form className="text-danger">{errors.contrasena?.message}</Form>
             </Form.Group>
-            <div className="text-center">
-              <Button
-                className=" text-light negro"
-                variant="dark"
-                type="submit"
-              >
+            <div className="text-center mt-5">
+              <Button className="text-light negro" variant="dark" type="submit">
                 Crear Cuenta
               </Button>
             </div>
