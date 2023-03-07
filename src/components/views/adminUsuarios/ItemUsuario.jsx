@@ -11,16 +11,14 @@ export const ItemUsuario = ({ usuario }) => {
       <td>{nombre}</td>
       <td>{email}</td>
       <td>{perfil}</td>
-      <td>{estado}</td>
       <td>
-        <div className="d-flex justify-content-center">
-          <Link className="btn btn-warning" to={`/administrar/editar/${id}`}>
-            <FaEdit></FaEdit>
-          </Link>
-          <Button variant="danger" onClick={() => {}}>
-            <FaTrash></FaTrash>
-          </Button>
-        </div>
+        {estado ? (
+          <>
+            <span class="badge rounded-pill text-bg-confirmado">Confirmado</span>
+          </>
+        ) : (
+          <span class="badge rounded-pill text-bg-pendiente">Pendiente</span>
+        )}
       </td>
     </tr>
   );

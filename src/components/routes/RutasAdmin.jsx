@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Administrador from "../views/Administrador";
-import CrearProducto from "../views/adminProductos/CrearProducto";
-import EditarProducto from "../views/adminProductos/EditarProducto";
+import { CrearProducto } from "../views/adminProductos/CrearProducto";
+import { EditarProducto } from "../views/adminProductos/EditarProducto";
 
 
 const RutasAdmin = ({ setUsuarioLogueado }) => {

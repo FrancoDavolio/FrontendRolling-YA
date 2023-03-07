@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { consultaAPI } from "../../helpers/pedidosAdmin";
 import { ItemPedido } from "../adminPedidos/ItemPedido";
@@ -29,51 +29,73 @@ export const AdminPedidos = () => {
         <h1 className="display-4 ">Pedidos</h1>
       </div>
       <hr />
-      <Table responsive bordered>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pedidos.map((pedido) => {
-            if (pedido.estado === "pendiente") {
-              return (<ItemPedido
-                key={pedido.id}
-                pedido={pedido}
-                setPedidos={setPedidos}
-              ></ItemPedido>)
-              
-            }
-          })}
-        </tbody>
-      </Table>
-      <Table responsive bordered>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-        {pedidos.map((pedido) => {
-                if (pedido.estado === "realizado") {
+      <Row>
+        <Col lg={6}>
+          <h2>Pendientes</h2>
+          <Table className="containerTable" responsive>
+            <thead>
+              <tr>
+                <th>
+                  <h1>Id</h1>
+                </th>
+                <th>
+                  <h1>Nombre</h1>
+                </th>
+                <th>
+                  <h1>Estado</h1>
+                </th>
+                <th>
+                  <h1>Acciones</h1>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {pedidos.map((pedido) => {
+                if (pedido.estado === false) {
                   return (
                     <ItemPedido
-                    key={pedido.id}
-                    pedido={pedido}
-                    setPedidos={setPedidos}
+                      key={pedido.id}
+                      pedido={pedido}
+                      setPedidos={setPedidos}
                     ></ItemPedido>
                   );
                 }
-        })}
-        </tbody>
-      </Table>
+              })}
+            </tbody>
+          </Table>
+        </Col>
+        <Col lg={6}>
+          <h2>Realizados</h2>
+          <Table className="containerTable" responsive>
+            <thead>
+              <tr>
+                <th>
+                  <h1>Id</h1>
+                </th>
+                <th>
+                  <h1>Nombre</h1>
+                </th>
+                <th>
+                  <h1>Estado</h1>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {pedidos.map((pedido) => {
+                if (pedido.estado === true) {
+                  return (
+                    <ItemPedido
+                      key={pedido.id}
+                      pedido={pedido}
+                      setPedidos={setPedidos}
+                    ></ItemPedido>
+                  );
+                }
+              })}
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
     </section>
   );
 };

@@ -13,7 +13,7 @@ import { CrearProducto } from "./components/views/adminProductos/CrearProducto";
 import SeparadorSuperior from "./components/common/SeparadorSuperior";
 import SeparadorInferior from "./components/common/SeparadorInferior";
 import AcercaDe from "./components/views/AcercaDe"
-import Detalle from "./components/views/Detalle"
+// import Detalle from "./components/views/Detalle"
 import Pedidos from "./components/views/Pedidos"
 
 
