@@ -7,7 +7,7 @@ import CardProductosInicio from "./pagInicio/cardProductosInicio";
 import { consultaAPI } from "../helpers/prodAdmin";
 import { Form } from "react-bootstrap";
 import { Card } from "react-bootstrap";
-import axios from "axios";
+// import axios from "axios";
 
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
@@ -21,22 +21,22 @@ const Inicio = () => {
     
  },[])
 /*controlar*/
- const peticionGet=async()=>{
-   await axios.get ("http://localhost:3004/productos")
-   .then(respuesta=>{
-       setObtenerProductos(respuesta.data);
-       obtenerProductos(respuesta.data);
-   }).catch(error=>{
-       console.log(error);
-   })
- }
- useEffect(()=>{
-   peticionGet();
- },[])
-const handleChange=e=>{
-  setbusqueda(e.target.value);
-  filtrar(e.target.value);
-}
+//  const peticionGet=async()=>{
+//    await axios.get ("http://localhost:3004/productos")
+//    .then(respuesta=>{
+//        setObtenerProductos(respuesta.data);
+//        obtenerProductos(respuesta.data);
+//    }).catch(error=>{
+//        console.log(error);
+//    })
+//  }
+//  useEffect(()=>{
+//    peticionGet();
+//  },[])
+// const handleChange=e=>{
+//   setbusqueda(e.target.value);
+//   filtrar(e.target.value);
+// }
 
 const filtrar=(terminoBusqueda)=>{
   var resultadoBusqueda=obtenerProductos.filter((elemento)=>{
@@ -94,7 +94,7 @@ const filtrar=(terminoBusqueda)=>{
         </Carousel.Item>
       </Carousel>
 
-      <div className="container buscador d-flex">
+      {/* <div className="container buscador d-flex">
 
             <input className="form-control inputBuscar"
             value={busqueda}
@@ -102,7 +102,7 @@ const filtrar=(terminoBusqueda)=>{
             onChange={handleChange}
             />
             <Button className="btn btn-success ms-2">buscar</Button>
-           </div>
+           </div> */}
       <hr />
 
       <Container>
@@ -112,7 +112,6 @@ const filtrar=(terminoBusqueda)=>{
 <section id="mysection">
 
 <article>
-
         <Row xs={1} md={2} lg={4} >
           {productos.map((producto) => (
             <CardProductosInicio
